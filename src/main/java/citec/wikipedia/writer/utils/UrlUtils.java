@@ -9,6 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import org.javatuples.Pair;
 
 /**
  *
@@ -24,10 +25,14 @@ public class UrlUtils {
 
     }
     
-    public static String getLastPartOfUrl(String url){
-        Path path = Paths.get(url);
-        return path.getFileName().toString();
-        
+    public static Pair<Boolean, String> getLastPartOfUrl(String url) {
+        Pair<Boolean, String> pair = new Pair<Boolean, String>(false, null);
+        try {
+            Path path = Paths.get(url);
+            return new Pair<Boolean, String>(true, path.getFileName().toString());
+        } catch (Exception exp) {
+            return new Pair<Boolean, String>(false, null);
+        }
     }
 
 }

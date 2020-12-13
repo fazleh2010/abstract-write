@@ -142,7 +142,7 @@ public class FormatAndMatch {
         return token;
     }
 
-    static String deleteChomma(String gram) {
+    public static String deleteChomma(String gram) {
         gram = gram.replaceAll(",", "");
         return gram;
     }
@@ -268,6 +268,8 @@ public class FormatAndMatch {
         
         return str;
     }
+    
+   
 
      
      public static void main(String args[]) {

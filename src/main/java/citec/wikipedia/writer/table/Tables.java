@@ -32,6 +32,10 @@ public class Tables implements PropertyNotation{
     private Map<String, EntityTable> entityTables = new HashMap<String, EntityTable>();
     private List<DBpediaEntity> allDBpediaEntitys = new ArrayList<DBpediaEntity>();
 
+    public Tables(String inputFileName,String entityTableDir) throws Exception {
+        this.inputFileName=inputFileName;
+        this.entityTableDir=entityTableDir;
+    }
 
      public Tables(String inputFileName,String entityTableDir,DbpediaClass dbpediaClass) throws Exception {
         this.inputFileName=inputFileName;

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>my.org</groupId>
-    <artifactId>ontology-lexicalization</artifactId>
+    <artifactId>abstract-write</artifactId>
     <version>1.6</version>
 
     <name>abstract-write</name>
