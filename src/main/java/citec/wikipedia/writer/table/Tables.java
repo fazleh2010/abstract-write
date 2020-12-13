@@ -227,6 +227,9 @@ public class Tables implements PropertyNotation{
     public void writingTable(DbpediaClass dbpediaClass) throws Exception {
         for (String predicate : dbpediaClass.getPropertyEntities().keySet()) {
             LinkedHashSet<String> entities = dbpediaClass.getPropertyEntities().get(predicate);
+            System.out.println("inputFileName:"+inputFileName);
+                        System.out.println("entityTableDir:"+entityTableDir);
+
             EntityTable entityTable = new EntityTable(inputFileName, entityTableDir, dbpediaClass.getClassName(), predicate, entities, TextAnalyzer.POS_TAGGER_WORDS);
             //entityTables.put(entityTable.getTableName(), entityTable);
         }
