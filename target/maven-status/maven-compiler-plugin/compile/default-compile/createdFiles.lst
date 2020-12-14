@@ -9,8 +9,8 @@ citec/wikipedia/writer/analyzer/Analyzer.class
 citec/wikipedia/writer/utils/StanfordTagger.class
 citec/wikipedia/writer/utils/FileFolderUtils.class
 citec/wikipedia/writer/constants/MenuOptions.class
-citec/wikipedia/writer/table/DbpediaClass.class
 citec/wikipedia/writer/utils/SortUtils.class
+citec/wikipedia/writer/table/DbpediaClass.class
 citec/wikipedia/writer/utils/StringMatcherUtil.class
 citec/wikipedia/writer/main/Main.class
 citec/wikipedia/writer/table/EntityTable.class
@@ -23,7 +23,7 @@ citec/wikipedia/writer/api/PropertyNotation$1.class
 citec/wikipedia/writer/table/Tables$3.class
 citec/wikipedia/writer/api/PropertyNotation.class
 citec/wikipedia/writer/constants/AbstractCreateParameter.class
-citec/wikipedia/writer/table/DBpediaEntity.class
 citec/wikipedia/writer/utils/UrlUtils.class
+citec/wikipedia/writer/table/DBpediaEntity.class
 citec/wikipedia/writer/utils/SortUtils$2.class
 citec/wikipedia/writer/table/DBpediaProperty.class
