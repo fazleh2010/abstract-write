@@ -5,12 +5,13 @@
  */
 package citec.wikipedia.writer.table;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
+import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import citec.wikipedia.writer.utils.FileFolderUtils;
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 /**
  *
@@ -78,16 +80,11 @@ public class Tables implements PropertyNotation{
         return allDBpediaEntitys;
     }
     
-    public  Map<String,List<DBpediaEntity>> readAlphabetSplitTables(String inputDir,String fileType) throws IOException, Exception {
+    
+    public  Map<String,List<DBpediaEntity>> readAlphabetSplitTables( List<File> list) throws IOException, Exception {
        Map<String,List<DBpediaEntity>> fileDBpediaEntities=new   TreeMap<String,List<DBpediaEntity>>();
-        List<File> list = FileFolderUtils.getFiles(inputDir, fileType, ".json");
-        if(list.isEmpty()){
-            throw new Exception("There is no files in "+inputDir+" to generate properties!!");
-        }
         this.className = null;
         for (File file : list) {
-            String[] info = file.getName().split("_");
-            className = info[0];
             ObjectMapper mapper = new ObjectMapper();
             List<DBpediaEntity> dbpediaEntitys = mapper.readValue(file, new TypeReference<List<DBpediaEntity>>() {
             });

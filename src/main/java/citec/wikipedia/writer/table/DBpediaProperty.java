@@ -5,7 +5,7 @@
  */
 package citec.wikipedia.writer.table;
 
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

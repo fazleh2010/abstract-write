@@ -5,7 +5,7 @@
  */
 package citec.wikipedia.writer.constants;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
+import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;

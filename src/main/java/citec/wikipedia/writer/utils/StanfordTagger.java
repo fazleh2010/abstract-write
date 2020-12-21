@@ -1,6 +1,6 @@
 package citec.wikipedia.writer.utils;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
+import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;

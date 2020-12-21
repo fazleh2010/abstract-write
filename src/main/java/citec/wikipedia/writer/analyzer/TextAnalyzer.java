@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citec.wikipedia.writer.api;
+package citec.wikipedia.writer.analyzer;
 
+import citec.wikipedia.writer.constants.PropertyNotation;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.TreeSet;
-import citec.wikipedia.writer.api.PropertyNotation;
 
 /**
  *
@@ -26,8 +26,15 @@ public interface TextAnalyzer {
     public static final String ADJECTIVE = "JJ";
     public static final String VERB = "VB";
     public static final String PRONOUN = "PRP";
-    public static final Set<String> PRONOUNS = new HashSet<String>(Arrays.asList("he",
-            "she"));
+    //public static final Set<String> PRONOUNS = new HashSet<String>(Arrays.asList("he",
+    //        "she","the_album","this_album"));
+    
+    public static final Map<String, Set<String>> PRONOUNS = new HashMap<String, Set<String>>() {
+        {
+            put(PropertyNotation.dbo_Person, new HashSet<String>(Arrays.asList("he", "she")));
+            put(PropertyNotation.dbo_Album, new HashSet<String>(Arrays.asList("the_album", "this_album")));
+        }
+    };
 
     public static final String NOUN = "NN";
     public static final String WORD = "WORD";

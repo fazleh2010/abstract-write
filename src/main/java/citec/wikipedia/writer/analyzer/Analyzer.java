@@ -5,8 +5,7 @@
  */
 package citec.wikipedia.writer.analyzer;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
@@ -184,44 +183,6 @@ public class Analyzer implements TextAnalyzer,PropertyNotation {
     public String getText() {
         return inputText;
     }
-
-    /*public List<HashMap<String, Set<String>>> getSenetences() {
-        return sentences;
-    }*/
-
-    /*public Map<String, Set<String>> getPosTaggers(Integer index) {
-        return sentencePosTags.get(index);
-    }
-
-    public Set<String> getAdjectives(Integer index) {
-        return sentencePosTags.get(index).get(TextAnalyzer.ADJECTIVE);
-    }
-
-    public Set<String> getNoun(Integer index) {
-        return sentencePosTags.get(index).get(TextAnalyzer.NOUN);
-    }
-
-    public Set<String> getWords(Integer index) {
-        return sentenceWords.get(index);
-    }
-
-    public String getDbpediaAbstract() {
-        return dbpediaAbstract.getText();
-    }*/
-
- /*@Override
-    public String toString() {
-        String str="";
-        for(Integer index=0;index<sentenceWords.size();index++){
-               String inputText=dbpediaAbstract.getText()+"\n"
-                      +this.sentencePosTags.get(index)+"\n"
-                      +this.sentenceWords.get(index)+"\n";
-               str+=inputText+"\n";
-        }
-       
-                           
-        return str;
-    }*/
 
     private boolean isStopWord(String word) {
         word=word.trim().toLowerCase();

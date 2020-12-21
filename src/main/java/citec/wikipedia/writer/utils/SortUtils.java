@@ -5,7 +5,7 @@
  */
 package citec.wikipedia.writer.utils;
 
-import static citec.wikipedia.writer.api.TextAnalyzer.ENGLISH_STOPWORDS;
+import static citec.wikipedia.writer.analyzer.TextAnalyzer.ENGLISH_STOPWORDS;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;

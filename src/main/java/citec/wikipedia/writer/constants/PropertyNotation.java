@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package citec.wikipedia.writer.api;
+package citec.wikipedia.writer.constants;
 
 import static citec.wikipedia.writer.table.DBpediaProperty.prefixesIncluded;
 import java.util.ArrayList;

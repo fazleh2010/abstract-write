@@ -6,7 +6,7 @@
 package citec.wikipedia.writer.table;
 
 import citec.wikipedia.writer.sparql.CurlSparqlQuery;
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

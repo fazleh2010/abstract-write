@@ -1,8 +1,8 @@
 package citec.wikipedia.writer.main;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
+import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import citec.wikipedia.writer.table.DbpediaClass;
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.table.Tables;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import java.io.File;

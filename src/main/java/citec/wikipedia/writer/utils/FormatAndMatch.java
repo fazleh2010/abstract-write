@@ -5,12 +5,14 @@
  */
 package citec.wikipedia.writer.utils;
 
+import static edu.stanford.nlp.trees.EnglishGrammaticalRelations.SUBJECT;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
+import java.util.regex.Pattern;
 import org.javatuples.Pair;
 
 /**
@@ -56,6 +58,8 @@ public class FormatAndMatch {
             String modifyKb = FormatAndMatch.format(kb).trim();
             for (String propValue : propertyValues) {
                 String modifyProvertyValue = FormatAndMatch.format(propValue).trim();
+                //System.out.println("modifyProvertyValue:"+modifyProvertyValue);
+                //  System.out.println("modifyKb:"+modifyKb);
                 if (modifyKb.equals(modifyProvertyValue)) {
                     return new Pair<Boolean, String>(Boolean.TRUE, kb);
                 }
@@ -70,29 +74,39 @@ public class FormatAndMatch {
         return intersection;
     }
 
-    public static Pair<String, String> replacePronoun(String text, String subject, Set<String> pronouns) {
+    public static Pair<String, String> replacePronoun(String text, String SUBJECT, Set<String> pronouns) {
         String[] sentenceTokens = text.split("_");
         String str = "", pronounFound = null;
         Integer index = 0;
-        for (String tokenStr : sentenceTokens) {
-            String line = null;
-            index = index + 1;
+
+        if (sentenceTokens.length >= 2) {
             for (String pronoun : pronouns) {
-                if (tokenStr.equals(pronoun)) {
+                if (text.contains(pronoun)) {
                     pronounFound = pronoun;
-                    tokenStr = subject;
+                    str = text.replace(pronoun, SUBJECT);
                     break;
                 }
             }
-            if (index > sentenceTokens.length - 1) {
-                line = tokenStr;
-            } else {
-                line = tokenStr + "_";
+        } else {
+            for (String tokenStr : sentenceTokens) {
+                String line = null;
+                index = index + 1;
+                for (String pronoun : pronouns) {
+                    if (tokenStr.equals(pronoun)) {
+                        pronounFound = pronoun;
+                        tokenStr = SUBJECT;
+                        break;
+                    }
+                }
+                if (index > sentenceTokens.length - 1) {
+                    line = tokenStr;
+                } else {
+                    line = tokenStr + "_";
+                }
+
+                str += line;
             }
-
-            str += line;
         }
-
         str = str + "\n";
         return new Pair<String, String>(pronounFound, str);
     }
@@ -104,13 +118,6 @@ public class FormatAndMatch {
             String entity = pair.getValue1().stripLeading();
             sentence = sentence.replace(id, term + "<" + entity + ">");
         }
-        /*for (String id : annotatedNgram.keySet()) {
-            String value = annotatedNgram.get(id);
-            String[] info = value.split("=");
-            info[0] = info[0].replaceAll("_", " ");
-            info[1] = info[1].stripLeading();
-            sentence = sentence.replace(id, info[0] + "<" + info[1] + ">");
-        }*/
         return sentence;
     }
 
@@ -270,14 +277,95 @@ public class FormatAndMatch {
     }
     
    
+   
+    /*public static String subjectAnnotated(String sentenceAnnotated, String subjectLink) {
+        String subjectTerm = null;
+        if(subjectLink.contains("_(")){
+           subjectTerm= subjectLink.replace("_(", " ");
+           String []info=subjectTerm.split(" ");
+           subjectTerm=info[0];
+        }
+        else
+           subjectTerm=subjectLink;
+       subjectTerm = format(subjectTerm).trim();
+       //sentenceAnnotated=format(sentenceAnnotated).trim();
+        if (sentenceAnnotated.contains(subjectTerm)) {
+            //sentenceAnnotated = sentenceAnnotated.replace(subjectTerm, "s(" + subjectLink + ")");
+            sentenceAnnotated.replace(subjectTerm, "<" + subjectLink + ">");
+        }
+        return sentenceAnnotated;
+
+    }*/
 
      
-     public static void main(String args[]) {
-        
-       checkStringMain();
+     /*public static void main(String args[]) {
+         String subjectLink= "Andalucia_(album)";
+         String sentenceAnnotated="Andalucia is the fourth studio album by Los Angeles rock band Tito & Tarantula, released in 2002. ";
+       //checkStringMain();
        //checkRegularExpression();
         
         
-    }
+    }*/
+     
+     public static void main(String[] args) {
+      String input = "<div>this is a <b>good</b> apple</div>";
+      System.out.println(input);
+      String s = replaceBetween(input, "<b>", "</b>", "big");
+      System.out.println(s);
+      s = replaceBetween(input, "<b>", "</b>", true, true, "big");
+      System.out.println(s);
+
+      String input2 = "there's more than one way to skin a cat";
+      System.out.println(input2);
+      String s2 = replaceBetween(input2, "more", "skin a", " to ");
+      System.out.println(s2);
+      s2 = replaceBetween(input2, "more", "skin a", true, true, "no");
+      System.out.println(s2);
+
+      System.out.println("-- without regex --");
+      replaceBetweenWithoutRegex(input2, "more", "skin a", true, true, "no");
+      System.out.println(s2);
+  }
+     
+     public static String replaceBetween(String input,
+                                      String start, String end,
+                                      String replaceWith) {
+      return replaceBetween(input, start, end, false, false, replaceWith);
+  }
+
+  public static String replaceBetween(String input,
+                                      String start, String end,
+                                      boolean startInclusive,
+                                      boolean endInclusive,
+                                      String replaceWith) {
+      start = Pattern.quote(start);
+      end = Pattern.quote(end);
+      return input.replaceAll("(" + start + ")" + ".*" + "(" + end + ")",
+              (startInclusive ? "" : "$1") + replaceWith + (endInclusive ? "" : "$2"));
+  }
+
+  //without regex
+  public static String replaceBetweenWithoutRegex(String str,
+                                                  String start, String end,
+                                                  boolean startInclusive,
+                                                  boolean endInclusive,
+                                                  String replaceWith) {
+      int i = str.indexOf(start);
+      while (i != -1) {
+          int j = str.indexOf(end, i + 1);
+          if (j != -1) {
+              String data = (startInclusive ? str.substring(0, i) : str.substring(0, i + start.length())) +
+                      replaceWith;
+              String temp = (endInclusive ? str.substring(j + end.length()) : str.substring(j));
+              data += temp;
+              str = data;
+              i = str.indexOf(start, i + replaceWith.length() + end.length() + 1);
+          } else {
+              break;
+          }
+      }
+      return str;
+  }
+
 
 }

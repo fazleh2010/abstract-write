@@ -6,7 +6,7 @@
 package citec.wikipedia.writer.sparql;
 
 import citec.wikipedia.writer.table.DBpediaProperty;
-import citec.wikipedia.writer.api.PropertyNotation;
+import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import citec.wikipedia.writer.utils.LanguageDetector;
 import com.fasterxml.jackson.core.JsonParser;

@@ -5,7 +5,6 @@
  */
 package citec.wikipedia.writer.analyzer;
 
-import citec.wikipedia.writer.api.TextAnalyzer;
 import edu.stanford.nlp.ling.TaggedWord;
 import opennlp.tools.langdetect.*;
 import opennlp.tools.lemmatizer.DictionaryLemmatizer;
