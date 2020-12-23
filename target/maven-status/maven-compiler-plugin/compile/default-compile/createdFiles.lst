@@ -3,12 +3,12 @@ citec/wikipedia/writer/analyzer/TextAnalyzer.class
 citec/wikipedia/writer/table/Tables.class
 citec/wikipedia/writer/utils/FormatAndMatch.class
 citec/wikipedia/writer/analyzer/LemmaAnalyzer.class
-citec/wikipedia/writer/constants/PropertyNotation.class
+citec/wikipedia/writer/constants/Property$1.class
 citec/wikipedia/writer/sparql/CurlSparqlQuery.class
-citec/wikipedia/writer/constants/PropertyNotation$1.class
 citec/wikipedia/writer/table/Tables$1.class
 citec/wikipedia/writer/analyzer/Analyzer.class
 citec/wikipedia/writer/utils/StanfordTagger.class
+citec/wikipedia/writer/constants/Property.class
 citec/wikipedia/writer/utils/FileFolderUtils.class
 citec/wikipedia/writer/constants/MenuOptions.class
 citec/wikipedia/writer/table/DbpediaClass.class

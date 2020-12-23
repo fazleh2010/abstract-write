@@ -53,20 +53,7 @@ public class FormatAndMatch {
         return false;
     }
 
-    public static Pair<Boolean, String> isPropertiesAndEntityMatched(Set<String> propertyValues, List<String> kbs) {
-        for (String kb : kbs) {
-            String modifyKb = FormatAndMatch.format(kb).trim();
-            for (String propValue : propertyValues) {
-                String modifyProvertyValue = FormatAndMatch.format(propValue).trim();
-                //System.out.println("modifyProvertyValue:"+modifyProvertyValue);
-                //  System.out.println("modifyKb:"+modifyKb);
-                if (modifyKb.equals(modifyProvertyValue)) {
-                    return new Pair<Boolean, String>(Boolean.TRUE, kb);
-                }
-            }
-        }
-        return new Pair<Boolean, String>(Boolean.FALSE, null);
-    }
+   
 
     public static Set<String> intersection(Set<String> sentenceTerms, Set<String> allTerms) {
         Set<String> intersection = new HashSet<String>(allTerms);

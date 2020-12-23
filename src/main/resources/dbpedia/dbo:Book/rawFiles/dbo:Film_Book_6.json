@@ -1,0 +1,90 @@
+[ {
+  "entityIndex" : "entity10849",
+  "entityUrl" : "http://dbpedia.org/resource/69_(novel)",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Ryu_Murakami" ],
+    "dbo:country" : [ "http://dbpedia.org/resource/Japan" ],
+    "dbo:dcc" : [ "895.6/35 20" ],
+    "dbo:isbn" : [ "4-7700-1736-7" ],
+    "dbo:language" : [ "http://dbpedia.org/resource/Japanese_language" ],
+    "dbo:lcc" : [ "PL856.U696 S4813 1993" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Roman_à_clef", "http://dbpedia.org/resource/Novel" ],
+    "dbo:mediaType" : [ "http://dbpedia.org/resource/Hardcover" ],
+    "dbo:numberOfPages" : [ "192" ],
+    "dbo:oclc" : [ "28549113" ],
+    "dbo:translator" : [ "http://dbpedia.org/resource/Ralph_F._McCarthy" ],
+    "dbo:wikiPageExternalLink" : [ "http://upcoming4.me/news/book-news/review-ryu-murakami-sixty-nine", "http://www.seekjapan.jp/article-1/788/Book+Review" ],
+    "dbo:wikiPageID" : [ "1587390" ],
+    "dbo:wikiPageRevisionID" : [ "696226826" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:Novels_set_in_Japan", "http://dbpedia.org/resource/Category:Japanese_novels", "http://dbpedia.org/resource/Category:Nagasaki_Prefecture", "http://dbpedia.org/resource/69_(film)", "http://dbpedia.org/resource/Roman_à_clef", "http://dbpedia.org/resource/High_school", "http://dbpedia.org/resource/Paperback", "http://dbpedia.org/resource/Sasebo,_Nagasaki", "http://dbpedia.org/resource/Category:Roman_à_clef_novels", "http://dbpedia.org/resource/Japan", "http://dbpedia.org/resource/Japanese_language", "http://dbpedia.org/resource/Kyushu", "http://dbpedia.org/resource/Counter-culture", "http://dbpedia.org/resource/Tokyo", "http://dbpedia.org/resource/Hardcover", "http://dbpedia.org/resource/Ryu_Murakami", "http://dbpedia.org/resource/Category:Novels_by_Ryū_Murakami", "http://dbpedia.org/resource/Category:Japanese_novels_adapted_into_films", "http://dbpedia.org/resource/2004_in_film", "http://dbpedia.org/resource/Category:1969_in_fiction", "http://dbpedia.org/resource/Category:1987_novels", "http://dbpedia.org/resource/Novel", "http://dbpedia.org/resource/Ralph_F._McCarthy", "http://dbpedia.org/resource/Kodansha_Europe", "http://dbpedia.org/resource/School_festival" ],
+    "dbp:caption" : [ "First English language edition" ],
+    "dbp:published" : [ "1987" ]
+  },
+  "words" : [ "69", "-LRB-", "city", "roman", "students", "movements", "シクスティナイン", "high", "world", "school", "Tokyo", "Shikusutinain", "mimic", "place", "takes", "counter-culture", "clef", "published", "Murakami", ",", "Japanese", ".", "Ryu", "1987", "tells", "obscure", "-RRB-", "parts", "try", "1969", "novel", "first", "coming", "age", "story", "taking" ],
+  "adjectives" : [ "high", "obscure", "Japanese" ],
+  "nouns" : [ "counter-culture", "clef", "city", "roman", "students", "movements", "Murakami", "Ryu", "world", "school", "Tokyo", "Shikusutinain", "parts", "place", "novel", "age", "story" ],
+  "text" : "69 (シクスティナイン Shikusutinain) is a roman à clef novel by Ryu Murakami. It was published first in 1987. It takes place in 1969, and tells the story of some high school students coming of age in an obscure Japanese city who try to mimic the counter-culture movements taking place in Tokyo and other parts of the world."
+}, {
+  "entityIndex" : "entity10850",
+  "entityUrl" : "http://dbpedia.org/resource/62",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:wikiPageID" : [ "35277" ],
+    "dbo:wikiPageRevisionID" : [ "707312884" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/79", "http://dbpedia.org/resource/Campania", "http://dbpedia.org/resource/Category:62", "http://dbpedia.org/resource/Lucan", "http://dbpedia.org/resource/Martyr", "http://dbpedia.org/resource/Syria", "http://dbpedia.org/resource/Herculaneum", "http://dbpedia.org/resource/Gaius_Rubellius_Plautus", "http://dbpedia.org/resource/20_AD", "http://dbpedia.org/resource/33_AD", "http://dbpedia.org/resource/34_AD", "http://dbpedia.org/resource/39_AD", "http://dbpedia.org/resource/40_AD", "http://dbpedia.org/resource/Battle_of_Rhandeia", "http://dbpedia.org/resource/Lucius_Afinius_Gallus", "http://dbpedia.org/resource/Legio_X_Fretensis", "http://dbpedia.org/resource/Naples_National_Archaeological_Museum", "http://dbpedia.org/resource/Castra", "http://dbpedia.org/resource/Medieval_period", "http://dbpedia.org/resource/Ab_urbe_condita", "http://dbpedia.org/resource/Anno_Domini", "http://dbpedia.org/resource/Catapult", "http://dbpedia.org/resource/Euphrates", "http://dbpedia.org/resource/Julian_calendar", "http://dbpedia.org/resource/Julius_Caesar", "http://dbpedia.org/resource/Nero", "http://dbpedia.org/resource/Otho", "http://dbpedia.org/resource/Pompey", "http://dbpedia.org/resource/Roman_legion", "http://dbpedia.org/resource/Roman_numerals", "http://dbpedia.org/resource/Rome", "http://dbpedia.org/resource/Jesus", "http://dbpedia.org/resource/Storm", "http://dbpedia.org/resource/Legio_III_Gallica", "http://dbpedia.org/resource/62_Pompeii_earthquake", "http://dbpedia.org/resource/Naples", "http://dbpedia.org/resource/Common_year_starting_on_Friday", "http://dbpedia.org/resource/Lucius_Caesennius_Paetus", "http://dbpedia.org/resource/Tigellinus", "http://dbpedia.org/resource/Portus", "http://dbpedia.org/resource/Sextus_Afranius_Burrus", "http://dbpedia.org/resource/Baths_of_Nero", "http://dbpedia.org/resource/Paul_of_Tarsus", "http://dbpedia.org/resource/Armenia", "http://dbpedia.org/resource/Claudia_Octavia", "http://dbpedia.org/resource/Seneca_the_Younger", "http://dbpedia.org/resource/Tigranocerta", "http://dbpedia.org/resource/Orient", "http://dbpedia.org/resource/Legio_VI_Ferrata", "http://dbpedia.org/resource/Vologases_I_of_Parthia", "http://dbpedia.org/resource/Hellenistic_civilization", "http://dbpedia.org/resource/Lucius_Caecilius_Iucundus", "http://dbpedia.org/resource/Pompeii", "http://dbpedia.org/resource/Poppaea_Sabina", "http://dbpedia.org/resource/1_AD", "http://dbpedia.org/resource/Publius_Marius", "http://dbpedia.org/resource/Gnaeus_Domitius_Corbulo", "http://dbpedia.org/resource/Tiridates_I_of_Armenia", "http://dbpedia.org/resource/Calendar_era", "http://dbpedia.org/resource/Consulship", "http://dbpedia.org/resource/Aulus_Persius_Flaccus", "http://dbpedia.org/resource/James_(brother_of_Jesus)" ]
+  },
+  "words" : [ "calendar", "-LRB-", "year", "display", "link", ",", "article", ".", "LXII", "number", "see", "Year", "common", "Friday", "-RRB-", "disambiguation", "uses", "62", "starting", "full", "Julian" ],
+  "adjectives" : [ "common", "full" ],
+  "nouns" : [ "calendar", "number", "Year", "year", "Friday", "disambiguation", "link", "uses", "article", "LXII", "Julian" ],
+  "text" : "(This article is about the year 62. For the number, see 62 (number). For other uses, see 62 (disambiguation).) Year 62 (LXII) was a common year starting on Friday (link will display the full calendar) of the Julian calendar. At the time, it was known as the Year of the Consulship of Marius and Afinius (or, less frequently, year 815 Ab urbe condita). The denomination 62 for this year has been used since the early medieval period, when the Anno Domini calendar era became the prevalent method in Europe for naming years."
+}, {
+  "entityIndex" : "entity10851",
+  "entityUrl" : "http://dbpedia.org/resource/61_Hours",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Lee_Child" ],
+    "dbo:isbn" : [ "978-0-593-05706-3" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Thriller_fiction" ],
+    "dbo:numberOfPages" : [ "448" ],
+    "dbo:oclc" : [ "436030133" ],
+    "dbo:previousWork" : [ "http://dbpedia.org/resource/Gone_Tomorrow" ],
+    "dbo:publisher" : [ "http://dbpedia.org/resource/Bantam_Press", "http://dbpedia.org/resource/Dell_Publishing" ],
+    "dbo:series" : [ "http://dbpedia.org/resource/Jack_Reacher" ],
+    "dbo:subsequentWork" : [ "http://dbpedia.org/resource/Worth_Dying_For_(novel)" ],
+    "dbo:wikiPageExternalLink" : [ "http://www.leechild.us/us/2010/61-hours/" ],
+    "dbo:wikiPageID" : [ "24256116" ],
+    "dbo:wikiPageRevisionID" : [ "734416749" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/The_New_York_Times", "http://dbpedia.org/resource/Category:Jack_Reacher_books", "http://dbpedia.org/resource/Category:English_thriller_novels", "http://dbpedia.org/resource/South_Dakota", "http://dbpedia.org/resource/Category:2010_British_novels", "http://dbpedia.org/resource/Worth_Dying_For_(novel)", "http://dbpedia.org/resource/Category:Novels_set_in_South_Dakota", "http://dbpedia.org/resource/Gone_Tomorrow", "http://dbpedia.org/resource/Thriller_fiction", "http://dbpedia.org/resource/Bantam_Press", "http://dbpedia.org/resource/Jack_Reacher", "http://dbpedia.org/resource/Lee_Child", "http://dbpedia.org/resource/Dell_Publishing" ],
+    "dbp:caption" : [ "UK Cover" ],
+    "dbp:country" : [ "United Kingdom" ],
+    "dbp:language" : [ "English" ],
+    "dbp:mediaType" : [ "Print , Audio, eBook" ],
+    "dbp:published" : [ "2010" ]
+  },
+  "words" : [ "Come", "di", "lungo", "del", "può", "droga", "decisiva", "l'azione", "giustizia", "nel", "La", "per", "Child", "libro", "che", "Sud", "sembra", "altri", "d'avventura", ",", ".", "cittadina", "rovescia", "definito", "importante", "-RRB-", "61", ";", "Longanesi", "marzo", "narrazione", "racconta", "-LRB-", "unisce", "Hours", "2012", "2010", "irreparabile", "thriller", "alla", "essere", "uscito", "quattordicesimo", "conto", "costituisce", "Jack", "scandita", "Reacher", "porta", "imprese", "`", "L'ora", "tipica", "ore", "e", "sede", "è", "giallo", "riportare", "una", "l'indagine", "romanzo", "Italia", "Lee", "dunque", "d'azione", "della", "traffico", "la", "capitolo", "serie", "le", "Dakota", "da", "quanto" ],
+  "adjectives" : [ "unisce", "irreparabile" ],
+  "nouns" : [ "racconta", "di", "Hours", "del", "thriller", "può", "decisiva", "essere", "l'azione", "nel", "uscito", "La", "Jack", "scandita", "Child", "Reacher", "porta", "L'ora", "libro", "che", "tipica", "Sud", "ore", "è", "altri", "romanzo", "Italia", "Lee", "dunque", "definito", "d'azione", "della", "serie", "Longanesi", "Dakota", "da", "narrazione" ],
+  "text" : "L'ora decisiva (61 Hours) è un romanzo di Lee Child del 2010 e costituisce il quattordicesimo capitolo della serie di Jack Reacher; in Italia è uscito nel marzo 2012 per Longanesi. Il libro racconta le imprese di Jack Reacher per riportare la giustizia in una cittadina del Dakota del Sud sede di un importante traffico di droga. La narrazione è scandita da un lungo conto alla rovescia di 61 ore che porta, a quanto sembra, all'irreparabile. Come altri della serie, L'ora decisiva unisce l'azione tipica di un romanzo d'avventura e l'indagine tipica del giallo, può dunque essere definito un thriller d'azione. Il libro ha raggiunto il primo posto nella classifica dei best-seller del New York Times Book Review."
+}, {
+  "entityIndex" : "entity10852",
+  "entityUrl" : "http://dbpedia.org/resource/69_Things_to_Do_with_a_Dead_Princess",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Stewart_Home" ],
+    "dbo:country" : [ "http://dbpedia.org/resource/United_Kingdom" ],
+    "dbo:isbn" : [ "9781841953816" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Fiction" ],
+    "dbo:numberOfPages" : [ "182" ],
+    "dbo:wikiPageExternalLink" : [ "http://www.stewarthomesociety.org/books.htm" ],
+    "dbo:wikiPageID" : [ "36325047" ],
+    "dbo:wikiPageRevisionID" : [ "581051596" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Fiction", "http://dbpedia.org/resource/Ann_Quin", "http://dbpedia.org/resource/Aberdeen", "http://dbpedia.org/resource/Diana,_Princess_of_Wales", "http://dbpedia.org/resource/Karl_Marx", "http://dbpedia.org/resource/Kathy_Acker", "http://dbpedia.org/resource/London_Review_of_Books", "http://dbpedia.org/resource/Robert_McCrum", "http://dbpedia.org/resource/United_Kingdom", "http://dbpedia.org/resource/W._G._Sebald", "http://dbpedia.org/resource/Death_of_Diana,_Princess_of_Wales_conspiracy_theories", "http://dbpedia.org/resource/Berg_(novel)", "http://dbpedia.org/resource/Samuel_Taylor_Coleridge", "http://dbpedia.org/resource/Category:Canongate_Books_books", "http://dbpedia.org/resource/Category:Novels_set_in_Aberdeenshire", "http://dbpedia.org/resource/Canongate_Books", "http://dbpedia.org/resource/Category:2002_novels", "http://dbpedia.org/resource/Stewart_Home", "http://dbpedia.org/resource/Michael_Bracewell", "http://dbpedia.org/resource/Robert_Coover", "http://dbpedia.org/resource/Aberdeen_University", "http://dbpedia.org/resource/Experimental_novel" ],
+    "dbp:imageSize" : [ "200" ],
+    "dbp:published" : [ "2002-05-08" ]
+  },
+  "words" : [ "69", "Princess", "death", "Wales", "discussions", "experimental", "Canongate", "Review", "Stewart", "positively", "conspiracy", "2002", "reviewed", "man", "Books", "Home", "Diana", "British", "Dead", "Things", "investigating", "sex", "published", ",", ".", "tells", "lots", "explicit", "suicidal", "Times", "London", "philosophical", "writer", "novel", "first", "theory", "story" ],
+  "adjectives" : [ "explicit", "British", "suicidal", "experimental", "philosophical", "first" ],
+  "nouns" : [ "Diana", "Dead", "Princess", "death", "Things", "sex", "Wales", "discussions", "Canongate", "Review", "Stewart", "lots", "conspiracy", "Times", "London", "writer", "man", "Books", "Home", "novel", "theory", "story" ],
+  "text" : "69 Things to Do with a Dead Princess is an experimental novel by the British writer Stewart Home, first published by Canongate in 2002. It tells the story of a suicidal man investigating a conspiracy theory about the death of Diana, Princess of Wales, with lots of explicit sex and philosophical discussions, and was positively reviewed by The Times and the London Review of Books."
+} ]

@@ -5,7 +5,6 @@
  */
 package citec.wikipedia.writer.table;
 
-import citec.wikipedia.writer.constants.PropertyNotation;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,12 +12,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import citec.wikipedia.writer.constants.Property;
 
 /**
  *
  * @author elahi
  */
-public class DBpediaProperty implements PropertyNotation {
+public class DBpediaProperty implements Property {
     private String propertyString = null;
     private String subject = null;
     private String predicate = null;

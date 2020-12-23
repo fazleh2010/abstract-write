@@ -6,7 +6,6 @@
 package citec.wikipedia.writer.sparql;
 
 import citec.wikipedia.writer.table.DBpediaProperty;
-import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import citec.wikipedia.writer.utils.LanguageDetector;
 import com.fasterxml.jackson.core.JsonParser;
@@ -36,6 +35,7 @@ import java.util.logging.Logger;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
+import citec.wikipedia.writer.constants.Property;
 
 /**
  *
@@ -191,7 +191,7 @@ public class CurlSparqlQuery {
                         propertyAttibute = isSelectedProperties(propertyAttibute);
                         if (propertyAttibute != null) {
                             value = infos[1].trim();
-                            if(propertyAttibute.contains(PropertyNotation.dbo_abstract)){
+                            if(propertyAttibute.contains(Property.dbo_abstract)){
                                /*if(!LanguageDetector.isEnglish(value)){
                                    //properties=new TreeMap<String, List<String>>();
                                    return;

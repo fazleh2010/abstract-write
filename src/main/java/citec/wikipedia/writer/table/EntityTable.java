@@ -6,7 +6,6 @@
 package citec.wikipedia.writer.table;
 
 import citec.wikipedia.writer.sparql.CurlSparqlQuery;
-import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -19,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
+import citec.wikipedia.writer.constants.Property;
 
 /**
  *

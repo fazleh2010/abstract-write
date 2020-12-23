@@ -5,7 +5,6 @@
  */
 package citec.wikipedia.writer.analyzer;
 
-import citec.wikipedia.writer.constants.PropertyNotation;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
@@ -15,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.StringReader;
 import java.util.*;
 import org.apache.commons.lang3.StringUtils;
+import citec.wikipedia.writer.constants.Property;
 
 
 
@@ -23,7 +23,7 @@ import org.apache.commons.lang3.StringUtils;
  * @author elahi
  *
  */
-public class Analyzer implements TextAnalyzer,PropertyNotation {
+public class Analyzer implements TextAnalyzer,Property {
 
     @JsonIgnore
     private static String resources = "src/main/resources/";
@@ -224,7 +224,7 @@ public class Analyzer implements TextAnalyzer,PropertyNotation {
 
 
     private void initialize() {
-        propertySelectedWords.put(PropertyNotation.dbo_party, dbpPartyWords);
+        propertySelectedWords.put(Property.dbo_party, dbpPartyWords);
     }
 
    

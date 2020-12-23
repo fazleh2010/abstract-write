@@ -7,7 +7,6 @@ package citec.wikipedia.writer.table;
 
 import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import citec.wikipedia.writer.utils.FileFolderUtils;
-import citec.wikipedia.writer.constants.PropertyNotation;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
@@ -22,12 +21,13 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
+import citec.wikipedia.writer.constants.Property;
 
 /**
  *
  * @author elahi
  */
-public class Tables implements PropertyNotation{
+public class Tables implements Property{
     private String inputFileName=null;
     private String entityTableDir=null;
     private String className=null;

@@ -2,7 +2,6 @@ package citec.wikipedia.writer.main;
 
 import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import citec.wikipedia.writer.table.DbpediaClass;
-import citec.wikipedia.writer.constants.PropertyNotation;
 import citec.wikipedia.writer.table.Tables;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import java.io.File;
@@ -12,6 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.Map;
+import citec.wikipedia.writer.constants.Property;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -31,14 +31,16 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String fileType = DbpediaClass.ALL;
         List<String> classFileNames = new ArrayList<String>();
+        String className=Property.dbo_Film;
 
         List<File> inputFiles = FileFolderUtils.getFiles(inputDir, ".txt");
         for (File inputFile : inputFiles) {
-            String dbo_ClassName =PropertyNotation.dbo_Person+"_"+inputFile.getName().replace(".txt", "");
+            String dbo_ClassName =className+"_"+inputFile.getName().replace(".txt", "");
             String inputFileName = inputDir + inputFile.getName();
             System.out.println(inputFileName);
             String rawFiles = dbpediaDir + dbo_ClassName + "/" + "rawFiles/";
             makeClassDir(dbpediaDir + dbo_ClassName + "/");
+            System.out.println(inputFile);
             DbpediaClass dbpediaClass = new DbpediaClass(dbo_ClassName, inputFileName, rawFiles, TextAnalyzer.POS_TAGGER_WORDS, fileType);
         }
     }

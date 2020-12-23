@@ -1,0 +1,88 @@
+[ {
+  "entityIndex" : "entity10804",
+  "entityUrl" : "http://dbpedia.org/resource/'Salem's_Lot",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Stephen_King" ],
+    "dbo:dcc" : [ "813.54" ],
+    "dbo:isbn" : [ "978-0-385-00751-1" ],
+    "dbo:lcc" : [ "PS3561.I483" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Gothic_fiction" ],
+    "dbo:mediaType" : [ "http://dbpedia.org/resource/Printing" ],
+    "dbo:numberOfPages" : [ "439" ],
+    "dbo:oclc" : [ "848489" ],
+    "dbo:publisher" : [ "http://dbpedia.org/resource/Doubleday_(publisher)" ],
+    "dbo:wikiPageExternalLink" : [ "http://www.worldswithoutend.com/novel.asp?ID=975" ],
+    "dbo:wikiPageID" : [ "395037" ],
+    "dbo:wikiPageRevisionID" : [ "744783423" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:1975_American_novels", "http://dbpedia.org/resource/Category:American_horror_novels", "http://dbpedia.org/resource/Category:American_vampire_novels", "http://dbpedia.org/resource/Category:Novels_by_Stephen_King", "http://dbpedia.org/resource/Printing", "http://dbpedia.org/resource/Shakers", "http://dbpedia.org/resource/Tabitha_King", "http://dbpedia.org/resource/Vampire", "http://dbpedia.org/resource/Vermont", "http://dbpedia.org/resource/Wetback_(slur)", "http://dbpedia.org/resource/David_Soul", "http://dbpedia.org/resource/Salem's_Lot_(2004_miniseries)", "http://dbpedia.org/resource/Arson", "http://dbpedia.org/resource/Primetime_Emmys", "http://dbpedia.org/resource/CIA", "http://dbpedia.org/resource/Juan_Corona", "http://dbpedia.org/resource/California", "http://dbpedia.org/resource/Category:Doubleday_(publisher)_books", "http://dbpedia.org/resource/Dracula", "http://dbpedia.org/resource/Gothic_fiction", "http://dbpedia.org/resource/Horror_fiction", "http://dbpedia.org/resource/Maine", "http://dbpedia.org/resource/Margaret_Mitchell", "http://dbpedia.org/resource/Playboy", "http://dbpedia.org/resource/Stephen_King", "http://dbpedia.org/resource/A_Return_to_Salem's_Lot", "http://dbpedia.org/resource/Jerusalem's_Lot_(Stephen_King)", "http://dbpedia.org/resource/Salem's_Lot_(1979_miniseries)", "http://dbpedia.org/resource/Salem's_Lot_(radio_drama)", "http://dbpedia.org/resource/Locus_Award", "http://dbpedia.org/resource/Night_Shift_(book)", "http://dbpedia.org/resource/University_of_Maine", "http://dbpedia.org/resource/Category:Novels_set_in_Maine", "http://dbpedia.org/resource/Daniel_Ellsberg", "http://dbpedia.org/resource/Hardcover", "http://dbpedia.org/resource/Austria", "http://dbpedia.org/resource/Covert_operation", "http://dbpedia.org/resource/Great_Depression", "http://dbpedia.org/resource/Hampden_Academy", "http://dbpedia.org/resource/Peyton_Place_(TV_series)", "http://dbpedia.org/resource/TNT_(TV_channel)", "http://dbpedia.org/resource/The_Dark_Tower_(series)", "http://dbpedia.org/resource/The_Dark_Tower_V:_Wolves_of_the_Calla", "http://dbpedia.org/resource/The_Dark_Tower_VI:_Song_of_Susannah", "http://dbpedia.org/resource/Watergate_tapes", "http://dbpedia.org/resource/Doubleday_(publisher)", "http://dbpedia.org/resource/Edgar_Award", "http://dbpedia.org/resource/Jerry_Uelsmann", "http://dbpedia.org/resource/Jeffery_Deaver", "http://dbpedia.org/resource/Jerusalem's_Lot", "http://dbpedia.org/resource/Gordon_Liddy", "http://dbpedia.org/resource/Kurt_Barlow", "http://dbpedia.org/resource/Danse_Macabre_(book)", "http://dbpedia.org/resource/Sam_Ervin", "http://dbpedia.org/resource/Rob_Lowe", "http://dbpedia.org/resource/New_York_(state)", "http://dbpedia.org/resource/One_for_the_Road_(short_story)", "http://dbpedia.org/resource/Novel", "http://dbpedia.org/resource/John_D._MacDonald", "http://dbpedia.org/resource/Larry_Cohen", "http://dbpedia.org/resource/Father_Callahan", "http://dbpedia.org/resource/Hitman", "http://dbpedia.org/resource/Invasion_of_the_Body_Snatchers_(1956_film)", "http://dbpedia.org/resource/World_Fantasy_Award_for_Best_Novel", "http://dbpedia.org/resource/File:Salemslottrade.jpg" ],
+    "dbp:caption" : [ "First edition cover" ],
+    "dbp:country" : [ "U.S." ],
+    "dbp:coverArtist" : [ "Dave Christensen" ],
+    "dbp:language" : [ "English" ],
+    "dbp:published" : [ "1975-10-17" ]
+  },
+  "words" : [ "``", "nine", "named", "-LRB-", "becoming", "American", "Night", "fiction", "Mears", "Maine", "vampires", "One", "thirteen", "second", "1975", "King", "Salem", "written", "lived", "1978", "`", "''", "Shift", "discover", "horror", "stories", "town", "involves", "author", "Jerusalem", "Road", "Ben", "published", "collection", "'s", ",", ".", "Lot", "revisited", "-RRB-", "short", "residents", "returns", "writer", "novel", "Stephen", "age", "story" ],
+  "adjectives" : [ "American", "short", "novel", "second" ],
+  "nouns" : [ "Shift", "horror", "stories", "town", "Night", "fiction", "author", "Mears", "Jerusalem", "Maine", "vampires", "Road", "Ben", "collection", "Lot", "King", "Salem", "residents", "writer", "Stephen", "novel", "age", "story" ],
+  "text" : "'Salem's Lot is a 1975 horror fiction novel written by the American author Stephen King. It was his second published novel. The story involves a writer named Ben Mears who returns to the town of Jerusalem's Lot (or 'Salem's Lot for short) in Maine, where he had lived from the age of nine through thirteen, only to discover that the residents are becoming vampires. The town is revisited in the short stories \"Jerusalem's Lot\" and \"One for the Road\", both from King's story collection, Night Shift (1978). The novel was nominated for the World Fantasy Award for Best Novel in 1976, and the Locus Award for the All-Time Best Fantasy Novel in 1987. In two separate interviews King said that, of all his books, 'Salem's Lot was his favorite. In his June 1983 Playboy interview, the interviewer mentioned that because it was his favorite, King was planning a sequel, but King has said on his website that because The Dark Tower series already continued the narrative in the Wolves of the Calla and Song of Susannah, he felt there was no longer a need for a sequel. In 1987 he told Phil Konstantin in The Highway Patrolman magazine: \"In a way it is my favorite story, mostly because of what it says about small towns. They are kind of a dying organism right now. The story seems sort of down home to me. I have a special cold spot in my heart for it!\" The book is dedicated to King's daughter Naomi: \"For Naomi Rachel King . . . promises to keep.\""
+}, {
+  "entityIndex" : "entity10805",
+  "entityUrl" : "http://dbpedia.org/resource/'Tis",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Frank_McCourt_(author)" ],
+    "dbo:isbn" : [ "0-684-86574-2" ],
+    "dbo:numberOfPages" : [ "368" ],
+    "dbo:oclc" : [ "44980084" ],
+    "dbo:previousWork" : [ "http://dbpedia.org/resource/Angela's_Ashes" ],
+    "dbo:subsequentWork" : [ "http://dbpedia.org/resource/Teacher_Man" ],
+    "dbo:wikiPageID" : [ "923716" ],
+    "dbo:wikiPageRevisionID" : [ "734999823" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:Sequel_novels", "http://dbpedia.org/resource/WKMS", "http://dbpedia.org/resource/Memoir", "http://dbpedia.org/resource/Frank_McCourt_(author)", "http://dbpedia.org/resource/Cheryl_Floyd", "http://dbpedia.org/resource/Category:1999_American_novels", "http://dbpedia.org/resource/Pulitzer_Prize", "http://dbpedia.org/resource/Blue-collar", "http://dbpedia.org/resource/Albany,_New_York", "http://dbpedia.org/resource/Stuyvesant_High_School", "http://dbpedia.org/resource/Category:American_memoirs", "http://dbpedia.org/resource/Angela's_Ashes", "http://dbpedia.org/resource/Category:Novels_by_Frank_McCourt", "http://dbpedia.org/resource/Teacher_Man", "http://dbpedia.org/resource/Charles_Scribner's_Sons", "http://dbpedia.org/resource/New_York_University", "http://dbpedia.org/resource/Wikt:'tis" ],
+    "dbp:caption" : [ "Cover of 'Tis" ],
+    "dbp:country" : [ "United States" ],
+    "dbp:language" : [ "English" ],
+    "dbp:published" : [ "1999" ]
+  },
+  "words" : [ "memoir", "winning", "childhood", "McCourt", "Angela", ",", "'s", "'T", "Ashes", "impoverished", ".", "Prize", "begins", "Pulitzer", "Ireland", "America", "ended", "Published", "written", "Frank", "return", "1999" ],
+  "adjectives" : [ "impoverished" ],
+  "nouns" : [ "memoir", "childhood", "Pulitzer", "McCourt", "Ireland", "America", "Angela", "Frank", "Ashes", "return", "Prize" ],
+  "text" : "'Tis is a memoir written by Frank McCourt. Published in 1999, it begins where McCourt ended Angela's Ashes, his Pulitzer Prize winning memoir of his impoverished childhood in Ireland and his return to America."
+}, {
+  "entityIndex" : "entity10806",
+  "entityUrl" : "http://dbpedia.org/resource/'48_(novel)",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/James_Herbert" ],
+    "dbo:country" : [ "http://dbpedia.org/resource/United_Kingdom" ],
+    "dbo:isbn" : [ "0-00-647600-7" ],
+    "dbo:language" : [ "http://dbpedia.org/resource/English_language" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Alternate_history", "http://dbpedia.org/resource/Horror_fiction" ],
+    "dbo:mediaType" : [ "http://dbpedia.org/resource/Paperback" ],
+    "dbo:numberOfPages" : [ "330" ],
+    "dbo:oclc" : [ "37369859" ],
+    "dbo:wikiPageExternalLink" : [ "http://www.james-herbert.co.uk/48.htm" ],
+    "dbo:wikiPageID" : [ "12249923" ],
+    "dbo:wikiPageRevisionID" : [ "743778046" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:Alternate_history_novels", "http://dbpedia.org/resource/Category:World_War_II_alternate_histories", "http://dbpedia.org/resource/1996_in_literature", "http://dbpedia.org/resource/Paperback", "http://dbpedia.org/resource/Island_Farm", "http://dbpedia.org/resource/Alternate_history", "http://dbpedia.org/resource/Horror_fiction", "http://dbpedia.org/resource/London", "http://dbpedia.org/resource/United_Kingdom", "http://dbpedia.org/resource/New_English_Library", "http://dbpedia.org/resource/Category:1996_British_novels", "http://dbpedia.org/resource/Category:British_post-apocalyptic_novels", "http://dbpedia.org/resource/Hardcover", "http://dbpedia.org/resource/Adolf_Hitler", "http://dbpedia.org/resource/English_language", "http://dbpedia.org/resource/Category:Novels_by_James_Herbert", "http://dbpedia.org/resource/James_Herbert", "http://dbpedia.org/resource/V-2", "http://dbpedia.org/resource/Axis_victory_in_World_War_II" ],
+    "dbp:published" : [ "1996" ]
+  },
+  "words" : [ "defeated", "dystopian", "Slow", "sometimes", "several", "sanity", "type", "Blood", "suggests", "suffer", "written", "Hitler", "missiles", "us", "AB", "viewpoint", "shape", "author", "'", "follows", "stranded", "history", ",", "-", ".", "wipes", "Herbert", "aside", "even", "person", "leads", "London", "biological", "Death", "completely", "American", "Adolf", "book", "weapon", "1996", "times", "moments", "marbles", "human", "`", "thoughts", "British", "horror", "pilot", "Hoke", "James", "race", "question", "may", "alternate", "'48", "blood", "ramble", "uses", "V-2", "novel", "first", "tends", "story" ],
+  "adjectives" : [ "British", "American", "dystopian", "several", "alternate", "biological", "human", "first" ],
+  "nouns" : [ "Adolf", "Slow", "book", "sanity", "type", "Blood", "weapon", "times", "moments", "marbles", "Hitler", "missiles", "AB", "viewpoint", "thoughts", "horror", "pilot", "Hoke", "James", "shape", "race", "author", "history", "blood", "Herbert", "person", "London", "Death", "V-2", "novel", "story" ],
+  "text" : "'48 is a 1996 alternate history horror novel by British horror author James Herbert. The book follows an American pilot stranded in a dystopian London after Adolf Hitler, moments before being completely defeated, uses a biological weapon in the shape of V-2 missiles, that wipes out the human race with the Blood Death - aside from those who suffer the Slow Death and those with AB blood type. The story is written in first person from the viewpoint of the American pilot, Hoke, and tends to ramble in his thoughts which sometimes leads us to question his sanity - even he suggests several times that he may not 'have all his marbles'."
+}, {
+  "entityIndex" : "entity10807",
+  "entityUrl" : "http://dbpedia.org/resource/'Tis_the_Season_(novel)",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:wikiPageID" : [ "13475874" ],
+    "dbo:wikiPageRevisionID" : [ "654744997" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Main_Street_(novel_series)" ]
+  },
+  "words" : [ ],
+  "adjectives" : [ ],
+  "nouns" : [ ],
+  "text" : ""
+} ]

@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * @author elahi
  */
-public interface PropertyNotation {
+public interface Property {
 
     public static final String rdf_type = "rdf:type";
     public static final String dbo_abstract = "dbo:abstract";

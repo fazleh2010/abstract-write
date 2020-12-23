@@ -1,4 +1,3 @@
-/home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/PropertyNotation.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/table/Tables.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/table/DBpediaProperty.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/utils/UrlUtils.java
@@ -19,5 +18,6 @@
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/analyzer/LemmaAnalyzer.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/utils/StringMatcherUtil.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/analyzer/TextAnalyzer.java
+/home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/Property.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/MenuOptions.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/table/DbpediaClass.java

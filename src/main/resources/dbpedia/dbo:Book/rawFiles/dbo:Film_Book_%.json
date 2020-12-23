@@ -1,0 +1,91 @@
+[ {
+  "entityIndex" : "entity10798",
+  "entityUrl" : "http://dbpedia.org/resource/%E2%80%94We_Also_Walk_Dogs",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : { },
+  "words" : [ ],
+  "adjectives" : [ ],
+  "nouns" : [ ],
+  "text" : ""
+}, {
+  "entityIndex" : "entity10799",
+  "entityUrl" : "http://dbpedia.org/resource/%C3%89l%C3%A9ments_de_g%C3%A9om%C3%A9trie_alg%C3%A9brique",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : { },
+  "words" : [ ],
+  "adjectives" : [ ],
+  "nouns" : [ ],
+  "text" : ""
+}, {
+  "entityIndex" : "entity10800",
+  "entityUrl" : "http://dbpedia.org/resource/%22A%22_Is_for_Alibi",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Sue_Grafton" ],
+    "dbo:isbn" : [ "978-0-8050-1334-4" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Mystery_fiction" ],
+    "dbo:mediaType" : [ "http://dbpedia.org/resource/Hardcover" ],
+    "dbo:numberOfPages" : [ "274" ],
+    "dbo:oclc" : [ "7835758" ],
+    "dbo:publicationDate" : [ "1982-04-15" ],
+    "dbo:publisher" : [ "http://dbpedia.org/resource/Henry_Holt_and_Company" ],
+    "dbo:subsequentWork" : [ "http://dbpedia.org/resource/%22B%22_Is_for_Burglar" ],
+    "dbo:wikiPageID" : [ "1282996" ],
+    "dbo:wikiPageRevisionID" : [ "735195857" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:1982_American_novels", "http://dbpedia.org/resource/Category:Novels_set_in_California", "http://dbpedia.org/resource/%22B%22_Is_for_Burglar", "http://dbpedia.org/resource/Oleander", "http://dbpedia.org/resource/Mystery_novel", "http://dbpedia.org/resource/Antihistamine", "http://dbpedia.org/resource/Santa_Barbara,_California", "http://dbpedia.org/resource/Southern_California", "http://dbpedia.org/resource/Kinsey_Millhone", "http://dbpedia.org/resource/Library_Journal", "http://dbpedia.org/resource/Mutual_fund", "http://dbpedia.org/resource/Category:American_mystery_novels", "http://dbpedia.org/resource/Category:Henry_Holt_and_Company_books", "http://dbpedia.org/resource/Hardcover", "http://dbpedia.org/resource/Plot_twist", "http://dbpedia.org/resource/Mystery_fiction", "http://dbpedia.org/resource/Sue_Grafton", "http://dbpedia.org/resource/Santa_Teresa_(fictional_city)", "http://dbpedia.org/resource/Category:Novels_by_Sue_Grafton", "http://dbpedia.org/resource/Henry_Holt_and_Company" ],
+    "dbp:caption" : [ "Cover of the book \"A\" Is for Alibi by Sue Grafton." ],
+    "dbp:country" : [ "United States" ],
+    "dbp:language" : [ "English" ],
+    "dbp:series" : [ "Alphabet Mysteries" ]
+  },
+  "words" : [ "``", "Alibi", "admits", "held", "murdering", "Grafton", "husband", "tablet", "Santa", "earlier", "based", "murder", "Sue", "going", "fictional", "published", "California", "'s", ",", "Millhone", "crushed", ".", "mystery", "1982", "contents", "switched", "oleander", "Alphabet", "Kinsey", "southern", "city", "fantasies", "conceived", "Teresa", "debut", "considerable", "swallowed", "divorce", "crime", "victim", "value", "''", "meant", "set", "could", "substituting", "alibi", "actually", "Barbara", "series", "writer", "time", "choice", "antihistamine", "novel", "first", "story" ],
+  "adjectives" : [ "southern", "considerable", "earlier", "fictional", "oleander", "crushed", "first" ],
+  "nouns" : [ "Alphabet", "Kinsey", "Alibi", "city", "fantasies", "Teresa", "Grafton", "husband", "debut", "tablet", "Santa", "divorce", "crime", "victim", "value", "murder", "California", "alibi", "Millhone", "mystery", "Barbara", "contents", "series", "writer", "time", "choice", "antihistamine", "novel", "story" ],
+  "text" : "\"A\" Is for Alibi is crime writer Sue Grafton's debut mystery novel in the Kinsey Millhone \"Alphabet mystery\" series, first published in 1982. The novel is set in the fictional southern California city of Santa Teresa, based on Santa Barbara. Grafton admits she conceived the story on her own \"fantasies\" of murdering her then husband while going through a divorce. The choice of murder by substituting the contents of an antihistamine tablet with crushed oleander meant that an alibi held no value because the contents of the tablet could have been switched a considerable time earlier than the victim actually swallowed the tablet. The first printing of \"A\" Is for Alibi was 7,500 copies, with sales of about 6,000."
+}, {
+  "entityIndex" : "entity10801",
+  "entityUrl" : "http://dbpedia.org/resource/%C3%80_rebours",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : { },
+  "words" : [ ],
+  "adjectives" : [ ],
+  "nouns" : [ ],
+  "text" : ""
+}, {
+  "entityIndex" : "entity10802",
+  "entityUrl" : "http://dbpedia.org/resource/%22...And_Ladies_of_the_Club%22",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : {
+    "dbo:author" : [ "http://dbpedia.org/resource/Helen_Hooven_Santmyer" ],
+    "dbo:country" : [ "http://dbpedia.org/resource/United_States" ],
+    "dbo:dcc" : [ "813/.52 19" ],
+    "dbo:isbn" : [ "0-8142-0323-X" ],
+    "dbo:language" : [ "http://dbpedia.org/resource/English_language" ],
+    "dbo:lcc" : [ "PS3537.A775 A82 1982" ],
+    "dbo:literaryGenre" : [ "http://dbpedia.org/resource/Family_saga" ],
+    "dbo:mediaType" : [ "http://dbpedia.org/resource/Paperback", "http://dbpedia.org/resource/Hardcover" ],
+    "dbo:numberOfPages" : [ "1176", "1344", "1433" ],
+    "dbo:oclc" : [ "8050632" ],
+    "dbo:publisher" : [ "http://dbpedia.org/resource/G._P._Putnam's_Sons", "http://dbpedia.org/resource/Berkley_Books", "http://dbpedia.org/resource/Ohio_State_University_Press" ],
+    "dbo:wikiPageID" : [ "2538127" ],
+    "dbo:wikiPageRevisionID" : [ "742522654" ],
+    "dbo:wikiPageWikiLink" : [ "http://dbpedia.org/resource/Category:1982_American_novels", "http://dbpedia.org/resource/Category:American_historical_novels", "http://dbpedia.org/resource/Sinclair_Lewis", "http://dbpedia.org/resource/Category:Novels_set_in_Ohio", "http://dbpedia.org/resource/Paperback", "http://dbpedia.org/resource/United_States", "http://dbpedia.org/resource/Category:Novels_with_lesbian_themes", "http://dbpedia.org/resource/Ohio", "http://dbpedia.org/resource/G._P._Putnam's_Sons", "http://dbpedia.org/resource/Category:Novels_by_Helen_Hooven_Santmyer", "http://dbpedia.org/resource/Berkley_Books", "http://dbpedia.org/resource/Book_discussion_club", "http://dbpedia.org/resource/Hardcover", "http://dbpedia.org/resource/English_language", "http://dbpedia.org/resource/Family_saga", "http://dbpedia.org/resource/Main_Street_(novel)", "http://dbpedia.org/resource/Novel", "http://dbpedia.org/resource/Helen_Hooven_Santmyer", "http://dbpedia.org/resource/Ohio_State_University_Press" ],
+    "dbp:caption" : [ "First trade edition" ],
+    "dbp:coverArtist" : [ "from Culver Pictures" ],
+    "dbp:isbnNote" : [ "ISBN 0-399-12965-0", "ISBN 0-425-07704-7" ],
+    "dbp:releaseDate" : [ "* 1982" ]
+  },
+  "words" : [ "Santmyer", "marry", "years", "soon", "1932", "marriages", "looks", "introduced", "children", "evolves", "club", "written", "group", "new", "town", "lives", "grandchildren", "fictional", "Rausch", "significant", ",", "Waynesboro", "'s", "community", ".", "involved", "College", "begin", "Ladies", "1868", "women", "primary", "woman", "graduates", "literary", "book", "changes", "characters", "throughout", "course", "Female", "Hooven", "Many", "Anne", "''", "Gordon", "spans", "follow", "opening", "...", "Sally", "Club", "service", "organization", "Ohio", "decades", "novel", "Helen", "chronicle" ],
+  "adjectives" : [ "new", "literary", "fictional", "Female", "significant", "Many", "novel", "primary" ],
+  "nouns" : [ "woman", "Santmyer", "graduates", "book", "years", "marriages", "characters", "children", "club", "course", "Hooven", "Anne", "group", "Gordon", "town", "lives", "grandchildren", "Rausch", "community", "Waynesboro", "opening", "Sally", "service", "Club", "organization", "College", "Ohio", "decades", "Ladies", "Helen", "women", "chronicle" ],
+  "text" : "\"...And Ladies of the Club\" is a novel, written by Helen Hooven Santmyer, about a group of women in the fictional town of Waynesboro, Ohio who begin a woman's literary club, which evolves through the years into a significant community service organization in the town. The novel, which looks at the club as it changes throughout the years, spans decades in the lives of the women involved in the club, between 1868 and 1932. Many characters are introduced in the course of the novel, but the primary characters are Anne Gordon and Sally Rausch, who in 1868 are new graduates of the Waynesboro Female College. They marry soon after the opening of the book, and the decades that follow chronicle their marriages and those of their children and grandchildren. Santmyer focuses not just on the lives of the women in the Club, but also their families, friends, politics, and developments in their small town and the larger world."
+}, {
+  "entityIndex" : "entity10803",
+  "entityUrl" : "http://dbpedia.org/resource/%C3%9Altimo_Volume",
+  "dboClass" : "dbo:Film_Book",
+  "properties" : { },
+  "words" : [ ],
+  "adjectives" : [ ],
+  "nouns" : [ ],
+  "text" : ""
+} ]
