@@ -25,15 +25,10 @@ public class DbpediaClass implements AbstractCreateParameter {
     private Set<String> allEntities = new TreeSet<String>();
     private Tables tables = null;
 
-    public DbpediaClass(String className, String inputFileName, String rawFiles, String POS_TAGGER, String type) throws IOException, Exception {
+    public DbpediaClass(String className, String inputFileName, String rawFiles, String POS_TAGGER,Integer limit) throws IOException, Exception {
         this.className = className;
-        if (type.contains(ALL)) {
-            findAllPropertyEntities(inputFileName);
-            this.tables = new Tables(new File(inputFileName).getName(), rawFiles, this);
-        } else if (type.contains(FREQUENT_TRIPLE)) {
-            findPropertyEntities(inputFileName);
-        }
-
+        this.findAllPropertyEntities(inputFileName);
+        this.tables = new Tables(new File(inputFileName).getName(), rawFiles, this, limit);
     }
 
     private void findPropertyEntities(String democraticJSON) throws FileNotFoundException, IOException, Exception {

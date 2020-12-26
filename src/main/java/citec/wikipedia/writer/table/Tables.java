@@ -10,7 +10,6 @@ import citec.wikipedia.writer.utils.FileFolderUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +19,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
 import citec.wikipedia.writer.constants.Property;
 
 /**
@@ -41,10 +39,10 @@ public class Tables implements Property{
         this.entityTableDir=entityTableDir;
     }
 
-     public Tables(String inputFileName,String entityTableDir,DbpediaClass dbpediaClass) throws Exception {
+     public Tables(String inputFileName,String entityTableDir,DbpediaClass dbpediaClass,Integer limit) throws Exception {
         this.inputFileName=inputFileName;
         this.entityTableDir=entityTableDir;
-        this.writingTable(dbpediaClass);
+        this.writingTable(dbpediaClass,limit);
     }
 
     public void readTable(String fileName) throws IOException, Exception {
@@ -139,72 +137,11 @@ public class Tables implements Property{
 
     }
     
-    /*public void readSplitTables(String inputDir, String classFileName, String outputDir) throws IOException, Exception {
-        List<File> list = FileFolderUtils.getFiles(inputDir, classFileName, ".json");
-        String className = null;
-        List<DBpediaEntity> allDBpediaEntitys = new ArrayList<DBpediaEntity>();
-        //File[] list = FileFolderUtils.getFiles(dbpediaDir, ".json");
-        for (File file : list) {
-            //System.out.println("file..."+file.getName());
-            String[] info = file.getName().split("_");
-            className = info[0];
-            ObjectMapper mapper = new ObjectMapper();
-            List<DBpediaEntity> dbpediaEntitys = mapper.readValue(file, new TypeReference<List<DBpediaEntity>>() {
-            });
-
-            allDBpediaEntitys.addAll(dbpediaEntitys);
-        }
-
-        Map<String, List<DBpediaEntity>> propertyEntities = new HashMap<String, List<DBpediaEntity>>();
-
-        for (DBpediaEntity DBpediaEntity : allDBpediaEntitys) {
-            List<DBpediaEntity> entities = new ArrayList<DBpediaEntity>();
-            for (String property : DBpediaEntity.getProperties().keySet()) {
-                //if (PropertyNotation.include.contains(property)) {
-                    if (propertyEntities.containsKey(property)) {
-                        entities = propertyEntities.get(property);
-                        entities.add(DBpediaEntity);
-                        propertyEntities.put(property, entities);
-                    } else {
-                        entities.add(DBpediaEntity);
-                        propertyEntities.put(property, entities);
-                    }
-                //}
-
-            }
-        }
-
-        for (String property : propertyEntities.keySet()) {
-            String tableName = outputDir + className + "_" + property;
-            List<DBpediaEntity> dbpediaEntitys = propertyEntities.get(property);
-            List<DBpediaEntity> correctedEntities = new ArrayList<DBpediaEntity>();
-            Set<String> properties = new HashSet<String>();
-            Integer index=0;
-            for (DBpediaEntity dbpediaEntity : dbpediaEntitys) {
-                if (!properties.contains(dbpediaEntity.getEntityUrl())) {
-                    if (dbpediaEntity.getProperties().containsKey(property)) {
-                        index=index+1;
-                        List<String> values = dbpediaEntity.getProperties().get(property);
-                        DBpediaEntity dbpediaEntityNew = new DBpediaEntity(dbpediaEntity,index, property, values);
-                        correctedEntities.add(dbpediaEntityNew);
-                        properties.add(dbpediaEntityNew.getEntityUrl());
-                    }
-                }
-
-            }
-            EntityTable entityTable = new EntityTable(inputFileName, tableName, correctedEntities);
-            entityTables.put(entityTable.getTableName(), entityTable);
-            //break;
-        }
-
-    }*/
-
-    public void writingTable(DbpediaClass dbpediaClass, Set<String> checkProperties) throws Exception {
+    public void writingTable(DbpediaClass dbpediaClass, Set<String> checkProperties, Integer limit) throws Exception {
         Map<String, LinkedHashSet<String>> propertyEntities = new TreeMap<String, LinkedHashSet<String>>();
         for (String propertyString : dbpediaClass.getPropertyEntities().keySet()) {
             DBpediaProperty property = new DBpediaProperty(propertyString);
             LinkedHashSet<String> entities = dbpediaClass.getPropertyEntities().get(propertyString);
-            System.out.println(entities);
             String predicate = property.getPredicate();
             if (checkProperties.contains(predicate)) {
                 if (propertyEntities.containsKey(predicate)) {
@@ -220,21 +157,17 @@ public class Tables implements Property{
             }
         }
         
-        for(String predicate:propertyEntities.keySet()){
-           LinkedHashSet<String> entities = propertyEntities.get(predicate);
-           EntityTable entityTable = new EntityTable(inputFileName,entityTableDir, dbpediaClass.getClassName(), predicate, entities, TextAnalyzer.POS_TAGGER_WORDS);
-           //entityTables.put(entityTable.getTableName(), entityTable);
+        for (String alphabet : propertyEntities.keySet()) {
+            LinkedHashSet<String> entities = propertyEntities.get(alphabet);
+            EntityTable entityTable = new EntityTable(inputFileName, entityTableDir, dbpediaClass.getClassName(), alphabet, entities, TextAnalyzer.POS_TAGGER_WORDS, limit);
         }
+       
     }
 
-    public void writingTable(DbpediaClass dbpediaClass) throws Exception {
+    public void writingTable(DbpediaClass dbpediaClass, Integer limit) throws Exception {
         for (String predicate : dbpediaClass.getPropertyEntities().keySet()) {
             LinkedHashSet<String> entities = dbpediaClass.getPropertyEntities().get(predicate);
-            System.out.println("inputFileName:"+inputFileName);
-                        System.out.println("entityTableDir:"+entityTableDir);
-
-            EntityTable entityTable = new EntityTable(inputFileName, entityTableDir, dbpediaClass.getClassName(), predicate, entities, TextAnalyzer.POS_TAGGER_WORDS);
-            //entityTables.put(entityTable.getTableName(), entityTable);
+            EntityTable entityTable = new EntityTable(inputFileName, entityTableDir, dbpediaClass.getClassName(), predicate, entities, TextAnalyzer.POS_TAGGER_WORDS, limit);
         }
     }
 

@@ -1,0 +1,8 @@
+english abstract works
+
+"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?wikipedia_data_field_abstract
+WHERE {
+    <http://dbpedia.org/resource/Allan_Dwan> dbpedia-owl:abstract ?wikipedia_data_field_abstract.
+    FILTER langMatches(lang(?wikipedia_data_field_abstract),'en')
+  }"   

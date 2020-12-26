@@ -7,10 +7,6 @@ package citec.wikipedia.writer.sparql;
 
 import citec.wikipedia.writer.table.DBpediaProperty;
 import citec.wikipedia.writer.utils.FileFolderUtils;
-import citec.wikipedia.writer.utils.LanguageDetector;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.JsonElement;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,58 +28,51 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
-import citec.wikipedia.writer.constants.Property;
 
 /**
  *
  * @author elahi
  */
-public class CurlSparqlQuery {
+public class SparqlQueryImpl implements SparqlQuery {
 
-    private static String endpoint = "https://dbpedia.org/sparql";
     private Map<String, List<String>> properties = new TreeMap<String, List<String>>();
     private Set<String> selectedProperties = new HashSet<String>();
     private Set<String> excludeProperties = new HashSet<String>();
     private Map<String, String> entityLinks = new TreeMap<String, String>();
+    private String propertyType = null;
 
-
-    public CurlSparqlQuery(String entityUrl, String property) {
-        //entityUrl="http://dbpedia.org/resource/Andy_Lau";
-        String sparqlQuery = this.setSparqlQueryProperty(entityUrl);
-        
-        /*if (selectedProperties.contains(property)) {
-            selectedProperties.add(property);
-            selectedProperties.add(PropertyNotation.dbo_abstract);
-        }*/
-        
-        String resultSparql = executeSparqlQuery(sparqlQuery);
-        System.out.println("resultSparql:"+resultSparql);
-        parseResult(resultSparql);
-        /*if(!properties.containsKey(PropertyNotation.dbo_abstract)){
-            System.out.println("entityUrl:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+entityUrl);
-            System.out.println("properties:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+properties.get(PropertyNotation.dbo_abstract));
-        }*/
+    public SparqlQueryImpl(String entityUrl) throws DOMException, Exception {
+        this.sparqlQuery(entityUrl, ABSTRACT_PROPERTY);
+        if (!this.properties.isEmpty()) {
+            this.sparqlQuery(entityUrl, OTHER_PROPERTY);
+        }
     }
-    
-    public CurlSparqlQuery(String sentenceLine) throws IOException, DOMException, Exception {
-        String command=this.setRestFulCommand(sentenceLine);
+
+    private void sparqlQuery(String entityUrl, String propertyType) throws IOException, DOMException, Exception {
+        this.propertyType = propertyType;
+        String sparqlQuery = this.setSparqlQueryProperty(entityUrl);
+        //System.out.println("sparqlQuery:" + sparqlQuery);
+        String resultSparql = executeSparqlQuery(sparqlQuery);
+        //System.out.println("resultSparql:" + resultSparql);
+        parseResult(resultSparql);
+    }
+
+    public void dbpediaSpotLight(String sentenceLine) throws IOException, DOMException, Exception {
+        String command = this.setRestFulCommand(sentenceLine);
         String resultRestFul = executeRestfulQuery(command);
         this.entityLinks = parseRESTfulResult(resultRestFul);
     }
-     
-    
-     
-      private String executeRestfulQuery(String command) {
-       String result=null;
+
+    private String executeRestfulQuery(String command) {
+        String result = null;
         Process process = null;
         try {
             process = Runtime.getRuntime().exec(command);
             //System.out.print(command);
         } catch (Exception ex) {
-            Logger.getLogger(CurlSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SparqlQueryImpl.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("error in unicode in sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -98,9 +87,9 @@ public class CurlSparqlQuery {
                 builder.append(System.getProperty("line.separator"));
             }
             result = builder.toString();
-           
+
         } catch (IOException ex) {
-            Logger.getLogger(CurlSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SparqlQueryImpl.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("error in reading sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -112,11 +101,11 @@ public class CurlSparqlQuery {
         Process process = null;
         try {
             resultUnicode = FileFolderUtils.stringToUrlUnicode(query);
-            command = "curl " + endpoint + "?query=" + resultUnicode;
+            command = "curl " + END_POINT + "?query=" + resultUnicode;
             process = Runtime.getRuntime().exec(command);
             //System.out.print(command);
         } catch (Exception ex) {
-            Logger.getLogger(CurlSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SparqlQueryImpl.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("error in unicode in sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -131,7 +120,7 @@ public class CurlSparqlQuery {
             }
             result = builder.toString();
         } catch (IOException ex) {
-            Logger.getLogger(CurlSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SparqlQueryImpl.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("error in reading sparql query!" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -146,7 +135,7 @@ public class CurlSparqlQuery {
             builder = factory.newDocumentBuilder();
             this.parseResult(builder, xmlStr);
         } catch (Exception ex) {
-            Logger.getLogger(CurlSparqlQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SparqlQueryImpl.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("error in parsing sparql in XML!" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -174,51 +163,48 @@ public class CurlSparqlQuery {
             NodeList childList = results.item(i).getChildNodes();
             for (int j = 0; j < childList.getLength(); j++) {
                 Node childNode = childList.item(j);
-                //System.out.println(childNode.toString());
                 if ("result".equals(childNode.getNodeName())) {
                     String string = childList.item(j).getTextContent().trim();
                     String[] infos = string.split("\n");
                     List<String> wordList = Arrays.asList(infos);
-                    /*for(String word:wordList){
-                        System.out.println("word:"+word);
-                    }*/
+                    for (String word : wordList) {
+                        //System.out.println("word:"+word);
+                    }
                     //System.out.println("word:"+wordList);
                     String propertyAttibute = null, predicate = null, value = null;
-                    //for (String http : wordList) {
+                    if (propertyType.contains(ABSTRACT_PROPERTY)) {
+                        List<String> propertyValues = new ArrayList<String>();
+                        propertyValues.add(string);
+                        properties.put("dbo:abstract", propertyValues);
+                        break;
+                    } else if (propertyType.contains(OTHER_PROPERTY)) {
+                        if (this.istProperty(string) && !this.abstractProperty(string) && !this.isExcluded(string)) {
+                            propertyAttibute = infos[0];
+                            propertyAttibute = isSelectedProperties(propertyAttibute);
+                            if (propertyAttibute != null) {
+                                value = infos[1].trim();
+                                List<String> propertyValues = new ArrayList<String>();
+                                if (properties.containsKey(propertyAttibute)) {
+                                    propertyValues = properties.get(propertyAttibute);
+                                    propertyValues.add(value);
+                                } else {
+                                    propertyValues.add(value);
+                                    properties.put(propertyAttibute, propertyValues);
+                                }
 
-                    if (this.istProperty(string)) {
-                        propertyAttibute = infos[0];
-                        propertyAttibute = isSelectedProperties(propertyAttibute);
-                        if (propertyAttibute != null) {
-                            value = infos[1].trim();
-                            if(propertyAttibute.contains(Property.dbo_abstract)){
-                               /*if(!LanguageDetector.isEnglish(value)){
-                                   //properties=new TreeMap<String, List<String>>();
-                                   return;
-                               }*/
-                               
-                            }
-                            List<String> propertyValues = new ArrayList<String>();
-                            if (properties.containsKey(propertyAttibute)) {
-                                propertyValues = properties.get(propertyAttibute);
-                                propertyValues.add(value);
-                            } else {
-                                propertyValues.add(value);
-                                properties.put(propertyAttibute, propertyValues);
                             }
 
                         }
-
                     }
 
                     //}
                 }
             }
-            
+
         }
     }
 
-     public  Map<String, String> parseRESTfulResult(String HTMLSTring) throws IOException {
+    public Map<String, String> parseRESTfulResult(String HTMLSTring) throws IOException {
         Map<String, String> entityValues = new TreeMap<String, String>();
         org.jsoup.nodes.Document html = Jsoup.parse(HTMLSTring, "utf-8");
         for (Integer index = 0; index < html.select("a").size(); index++) {
@@ -230,7 +216,6 @@ public class CurlSparqlQuery {
         return entityValues;
     }
 
-    
     private boolean istProperty(String string) {
         boolean flag = false;
         if (string.contains("http://dbpedia.org/ontology/")
@@ -241,58 +226,37 @@ public class CurlSparqlQuery {
 
         return flag;
     }
+   
 
-    public Map<String, List<String>> getProperties() {
-        return properties;
-    }
-
-    /*private static String setSparqlQueryProperty(String entityUrl) {
-        return "select str(?text) as ?text\n"
-                + "    {\n"
-                + "    " + entityUrl + "dbo:abstract  ?text \n"
-                + "    FILTER (lang(?text) = 'en')\n"
-                + "    }";
-    }*/
-    public static String setSparqlQueryProperty(String entityUrl) {
-        return "select  ?p ?o\n"
-                + "    {\n"
-                + "    " + "<" + entityUrl + ">" + " ?p   ?o\n"
-                + "    }";
+    public String setSparqlQueryProperty(String entityUrl) {
+        if (this.propertyType.contains(ABSTRACT_PROPERTY)) {
+            return "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> "
+                    + "SELECT ?wikipedia_data_field_abstract "
+                    + "WHERE {" + "<" + entityUrl + ">" + " dbpedia-owl:abstract ?wikipedia_data_field_abstract. "
+                    + "FILTER langMatches(lang(?wikipedia_data_field_abstract),'en')}";
+        } else {
+            return "select  ?p ?o\n"
+                    + "    {\n"
+                    + "    " + "<" + entityUrl + ">" + " ?p   ?o\n"
+                    + "    }";
+        }
 
     }
-    
-    /*public static String setSparqlQueryProperty(String entityUrl) {
-        return "select  ?p ?o\n"
-                + "    {\n"
-                + "    " + "<" + entityUrl + ">" + " ?p   ?o\n"
-                + "    }";
-
-    }
-    
-    /*PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
-    SELECT ?wikipedia_data_field_name ?wikipedia_data_field_abstract
-    WHERE {
-        ?wikipedia_data foaf:name "Ballyhaunis"@en; foaf:name 
-        ?wikipedia_data_field_name; dbpedia-owl:abstract ?wikipedia_data_field_abstract.
-        FILTER langMatches(lang(?wikipedia_data_field_abstract),'en') 
-      }*/   
-
 
     private String isSelectedProperties(String property) {
         for (String propType : DBpediaProperty.prefixesIncluded.keySet()) {
             if (property.contains(propType)) {
                 String lastString = getLastString(property, '/');
                 property = property.replace(property, DBpediaProperty.prefixesIncluded.get(propType)) + lastString;
-                if(this.excludeProperties.contains(property))
-                     return null;
-                if(selectedProperties.isEmpty())
+                if (this.excludeProperties.contains(property)) {
+                    return null;
+                }
+                if (selectedProperties.isEmpty()) {
                     return property;
-                else if (selectedProperties.contains(property)) {
+                } else if (selectedProperties.contains(property)) {
                     return property;
                 }
-               
-               
+
             }
         }
         return null;
@@ -315,5 +279,28 @@ public class CurlSparqlQuery {
         return "curl -X GET https://api.dbpedia-spotlight.org/en/annotate?" + "text=" + sentenceLine + " -H accept: application/json";
     }
 
-   
+    private boolean abstractProperty(String string) {
+        if (string.contains(ABSTRACT_ATTRIBUTE)) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isExcluded(String string) {
+        if (string.contains("http://dbpedia.org/ontology/wiki")) {
+            return true;
+        }
+        return false;
+    }
+    
+    @Override
+    public Map<String, List<String>> getProperties() {
+        return properties;
+    }
+
+    @Override
+    public Boolean isAbstractContains() {
+        return this.properties.containsKey("dbo:abstract");
+    }
+
 }

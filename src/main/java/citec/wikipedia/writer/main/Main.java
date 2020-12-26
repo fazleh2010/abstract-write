@@ -2,7 +2,6 @@ package citec.wikipedia.writer.main;
 
 import citec.wikipedia.writer.analyzer.TextAnalyzer;
 import citec.wikipedia.writer.table.DbpediaClass;
-import citec.wikipedia.writer.table.Tables;
 import citec.wikipedia.writer.utils.FileFolderUtils;
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +9,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.Map;
 import citec.wikipedia.writer.constants.Property;
 
 /*
@@ -26,36 +24,35 @@ public class Main {
 
     private static String dbpediaDir = "src/main/resources/dbpedia/";
     private static String inputDir = dbpediaDir + "class-entity-files/input/";
-    private static String[] classDirectoryStructure = new String[]{"rawFiles", "pattern", "tables/" + "result", "tables/" + "selectedWords"};
+    private static String[] directory = new String[]{"rawFiles", "pattern", "tables/" + "result", "tables/" + "selectedWords"};
 
     public static void main(String[] args) throws Exception {
-        String fileType = DbpediaClass.ALL;
         List<String> classFileNames = new ArrayList<String>();
-        String className=Property.dbo_Film;
+        Integer limit = -1;
 
         List<File> inputFiles = FileFolderUtils.getFiles(inputDir, ".txt");
         for (File inputFile : inputFiles) {
-            String dbo_ClassName =className+"_"+inputFile.getName().replace(".txt", "");
+            String dbo_ClassName = inputFile.getName().replace(".txt", "");
             String inputFileName = inputDir + inputFile.getName();
-            System.out.println(inputFileName);
             String rawFiles = dbpediaDir + dbo_ClassName + "/" + "rawFiles/";
             makeClassDir(dbpediaDir + dbo_ClassName + "/");
-            System.out.println(inputFile);
-            DbpediaClass dbpediaClass = new DbpediaClass(dbo_ClassName, inputFileName, rawFiles, TextAnalyzer.POS_TAGGER_WORDS, fileType);
+            DbpediaClass dbpediaClass = new DbpediaClass(dbo_ClassName, inputFileName, rawFiles, TextAnalyzer.POS_TAGGER_WORDS, limit);
         }
     }
+
+   
 
     public static Boolean makeClassDir(String classDir) {
         try {
             Path path = Paths.get(classDir);
             Files.createDirectories(path);
-            path = Paths.get(classDir + classDirectoryStructure[0]);
+            path = Paths.get(classDir + directory[0]);
             Files.createDirectories(path);
-            path = Paths.get(classDir + classDirectoryStructure[1]);
+            path = Paths.get(classDir + directory[1]);
             Files.createDirectories(path);
-            path = Paths.get(classDir + classDirectoryStructure[2]);
+            path = Paths.get(classDir + directory[2]);
             Files.createDirectories(path);
-            path = Paths.get(classDir + classDirectoryStructure[3]);
+            path = Paths.get(classDir + directory[3]);
             Files.createDirectories(path);
             return true;
         } catch (IOException e) {

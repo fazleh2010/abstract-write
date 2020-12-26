@@ -4,7 +4,7 @@ citec/wikipedia/writer/table/Tables.class
 citec/wikipedia/writer/utils/FormatAndMatch.class
 citec/wikipedia/writer/analyzer/LemmaAnalyzer.class
 citec/wikipedia/writer/constants/Property$1.class
-citec/wikipedia/writer/sparql/CurlSparqlQuery.class
+citec/wikipedia/writer/sparql/SparqlQueryImpl.class
 citec/wikipedia/writer/table/Tables$1.class
 citec/wikipedia/writer/analyzer/Analyzer.class
 citec/wikipedia/writer/utils/StanfordTagger.class
@@ -21,6 +21,7 @@ citec/wikipedia/writer/table/Tables$2.class
 citec/wikipedia/writer/utils/RegexMatches.class
 citec/wikipedia/writer/constants/DirectoryLocation.class
 citec/wikipedia/writer/utils/LanguageDetector.class
+citec/wikipedia/writer/sparql/SparqlQuery.class
 citec/wikipedia/writer/table/Tables$3.class
 citec/wikipedia/writer/constants/AbstractCreateParameter.class
 citec/wikipedia/writer/table/DBpediaEntity.class

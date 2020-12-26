@@ -65,7 +65,7 @@ public class DBpediaEntity {
     }
  
 
-    public DBpediaEntity(String inputFileName, String dboClass, String dboProperty, String entityString, Map<String, List<String>> properties, String POS_TAGGER) throws Exception {
+    public DBpediaEntity(String inputFileName, String dboClass, String entityString, Map<String, List<String>> properties, String POS_TAGGER) throws Exception {
         this.inputFileName = inputFileName;
         this.dboClass = dboClass;
         this.entityString = entityString;

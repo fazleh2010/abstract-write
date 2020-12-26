@@ -8,8 +8,8 @@
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/analyzer/Analyzer.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/AbstractCreateParameter.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/utils/StanfordTagger.java
+/home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/sparql/SparqlQueryImpl.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/utils/LanguageDetector.java
-/home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/sparql/CurlSparqlQuery.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/utils/FileFolderUtils.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/table/DBpediaEntity.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/main/Main.java
@@ -21,3 +21,4 @@
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/Property.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/constants/MenuOptions.java
 /home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/table/DbpediaClass.java
+/home/elahi/write/new/abstract-write/src/main/java/citec/wikipedia/writer/sparql/SparqlQuery.java

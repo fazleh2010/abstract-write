@@ -379,15 +379,16 @@ public class FileFolderUtils {
         }
     }
 
-    public static void convertToJson(List<DBpediaEntity> dbpediaEntities, String filename) throws Exception {
+    public static void convertToJson(List<DBpediaEntity> dbpediaEntities, String filename)  {
         if (dbpediaEntities.isEmpty()) {
-            throw new Exception("the list is empty!!!");
+           System.out.println("the list is empty!!!");
+           return;
         }
         ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
         try {
             mapper.writeValue(Paths.get(filename + ".json").toFile(), dbpediaEntities);
         } catch (IOException ex) {
-            System.out.println("can not write following file!!");
+           System.out.println("can not convert DBpediaEntity to Json file!!!");
         }
     }
 
