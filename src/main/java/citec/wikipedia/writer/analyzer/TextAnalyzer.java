@@ -30,18 +30,19 @@ public interface TextAnalyzer {
     //public static final Set<String> PRONOUNS = new HashSet<String>(Arrays.asList("he",
     //        "she","the_album","this_album"));
     
-    public static final LinkedHashMap<String, Set<String>> PRONOUNS = new LinkedHashMap<String, Set<String>>() {
+    public static final LinkedHashMap<String, Set<String>> CLASSES = new LinkedHashMap<String, Set<String>>() {
         {
-            put(Property.dbo_Person, new HashSet<String>(Arrays.asList("he", "she")));
-            put(Property.dbo_Actor, new HashSet<String>(Arrays.asList("he", "she")));
-            put(Property.dbo_Politician, new HashSet<String>(Arrays.asList("he", "she")));
-            //put(Property.dbo_Album, new HashSet<String>(Arrays.asList("the_album_", "this_album_")));
+            //put(Property.dbo_Person, new HashSet<String>(Arrays.asList("he", "she")));
+            //put(Property.dbo_Actor, new HashSet<String>(Arrays.asList("he", "she")));
+            //put(Property.dbo_Politician, new HashSet<String>(Arrays.asList("he", "she")));
             //put(Property.dbo_Film, new HashSet<String>(Arrays.asList("the_film_", "this_film_")));
-            //put(Property.dbo_Book, new HashSet<String>(Arrays.asList("the_book_", "this_book_")));
-            put(Property.dbo_Company, new HashSet<String>(Arrays.asList("the_company_", "this_company_","it_is_","this_is_")));
-            put(Property.dbo_Country, new HashSet<String>(Arrays.asList("the_country_", "this_country_","it_is_","this_is_")));
-            put(Property.dbo_Location, new HashSet<String>(Arrays.asList("the_location_", "this_location_","it_is_","this_is_")));
-            put(Property.dbo_Place, new HashSet<String>(Arrays.asList("the_place_", "this_place_","it_is_","this_is_")));
+             put(Property.dbo_Company, new HashSet<String>(Arrays.asList("the_company_", "this_company_","it_is_","this_is_")));
+             put(Property.dbo_Book, new HashSet<String>(Arrays.asList("the_book_", "this_book_")));
+             put(Property.dbo_Album, new HashSet<String>(Arrays.asList("the_album_", "this_album_")));
+            
+            //put(Property.dbo_Country, new HashSet<String>(Arrays.asList("the_country_", "this_country_","it_is_","this_is_")));
+            //put(Property.dbo_Location, new HashSet<String>(Arrays.asList("the_location_", "this_location_","it_is_","this_is_")));
+            //put(Property.dbo_Place, new HashSet<String>(Arrays.asList("the_place_", "this_place_","it_is_","this_is_")));
            
             /*put(Property.dbo_TelevisionShow, new HashSet<String>(Arrays.asList("the_television_show_", "this_television_show_","the_show","this_show")));
             put(Property.dbo_City, new HashSet<String>(Arrays.asList("the_city_", "this_city_")));

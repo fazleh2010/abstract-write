@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package citec.wikipedia.writer.constants;
+
 /**
  *
  * @author elahi
@@ -14,18 +15,18 @@ public interface DirectoryLocation {
     public static String testJson = "qald-9-test-multilingual.json";
     public static String trainingJson = "qald-9-train-multilingual.json";
     public static String dbpediaDir = "src/main/resources/dbpedia/";
+    public static String dbpediaTestDir = "src/test/resources/dbpedia/";
+
     public static String dataDir = "data/";
     public static String entityTable = "entityTable/";
     public static String input = "input/";
     public static String output = "output/";
     public static String allPoliticianFile = dbpediaDir + input + "politicians.txt";
-    public static String patternDir = "pattern/";
     public static String nameEntityDir = "src/main/resources/nameEntiry/";
     public static String anchors = "src/main/resources/dbpedia/anchors/";
     public static String achorFileTsv = "anchors_sorted_by_frequency.tsv";
-    //private static String inputJsonFile = dataDir + input + "results-100000000-1000-concretePO.json";
-    //public static String inputJsonFile = dataDir + input + "results-100000000-100-concretePO.json";
-    //rivate static String inputWordFile = dbpediaDir + input + "politicians_with_democratic.yml";
-    //private static String outputArff = dbpediaDir + output + "democratic.arff";
-    //private static String stanfordModelFile = dbpediaDir + "english-left3words-distsim.tagger";
+    public static String JSON = ".json";
+    public static String rawFiles = "rawFiles/";
+    public static String patternDir = "pattern/";
+
 }

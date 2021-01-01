@@ -30,7 +30,7 @@ public class Main {
         List<String> classFileNames = new ArrayList<String>();
         Integer limit = -1;
 
-        List<File> inputFiles = FileFolderUtils.getFiles(inputDir, ".txt");
+        Set<File> inputFiles = FileFolderUtils.getFilesSet(inputDir, ".txt");
         for (File inputFile : inputFiles) {
             String dbo_ClassName = inputFile.getName().replace(".txt", "");
             String inputFileName = inputDir + inputFile.getName();

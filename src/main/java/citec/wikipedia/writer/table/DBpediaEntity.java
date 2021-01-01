@@ -5,22 +5,12 @@
  */
 package citec.wikipedia.writer.table;
 
-import citec.wikipedia.writer.analyzer.Analyzer;
-import citec.wikipedia.writer.utils.StringMatcherUtil;
-import citec.wikipedia.writer.table.DBpediaProperty;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
-import java.util.TreeSet;
-
 /**
  *
  * @author elahi
@@ -44,12 +34,6 @@ public class DBpediaEntity {
     @JsonProperty("properties")
     private Map<String, List<String>> properties = new TreeMap<String, List<String>>();
    
-    @JsonProperty("words")
-    private Set<String> words = new  HashSet<String>();
-    @JsonProperty("adjectives")
-    private Set<String> adjectives = new  HashSet<String>();
-    @JsonProperty("nouns")
-    private Set<String> nouns = new  HashSet<String>();
     @JsonProperty("text")
     private String text = null;
     @JsonIgnore
@@ -73,12 +57,6 @@ public class DBpediaEntity {
         index = index + 1;
         this.entityIndex = PREFIX +(index);
         this.text = this.getText(properties, DBpediaProperty.dbo_abstract);
-        if (this.text != null) {
-            Analyzer analyzer = new Analyzer(this.text, POS_TAGGER, 5);
-            this.words = analyzer.getWords();
-            this.nouns=analyzer.getNouns();
-            this.adjectives=analyzer.getAdjectives();
-        }
         this.properties = properties;
         this.properties.remove(DBpediaProperty.dbo_abstract);
 
@@ -91,9 +69,6 @@ public class DBpediaEntity {
         this.entityUrl = dbpediaEntity.getEntityUrl();
         this.entityIndex = index.toString()+"_"+dbpediaEntity.getEntityIndex();
         this.text = dbpediaEntity.getText();
-        this.words = dbpediaEntity.getWords();
-        this.nouns=dbpediaEntity.getNouns();
-        this.adjectives=dbpediaEntity.getAdjectives();
         this.properties.put(property, values);
     }
 
@@ -148,20 +123,6 @@ public class DBpediaEntity {
     public String getDboClass() {
         return dboClass;
     }
-
-    public Set<String> getWords() {
-        return words;
-    }
-
-    public Set<String> getAdjectives() {
-        return adjectives;
-    }
-
-    public Set<String> getNouns() {
-        return nouns;
-    }
-
-  
 
     public String getText() {
         return text;

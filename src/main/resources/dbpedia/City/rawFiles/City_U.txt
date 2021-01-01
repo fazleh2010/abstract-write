@@ -1,0 +1,16 @@
+http://dbpedia.org/resource/Usa,_%C5%8Cita
+http://dbpedia.org/resource/U%C5%BEice
+http://dbpedia.org/resource/Ukmerg%C4%97
+http://dbpedia.org/resource/Uni%C3%B3n_de_San_Antonio
+http://dbpedia.org/resource/Uruma,_Okinawa
+http://dbpedia.org/resource/Ueckerm%C3%BCnde
+http://dbpedia.org/resource/Umbergaon_INA
+http://dbpedia.org/resource/U%C5%BEventis
+http://dbpedia.org/resource/Uni%C3%A3o_da_Vit%C3%B3ria
+http://dbpedia.org/resource/Ug%C3%ADjar
+http://dbpedia.org/resource/U%C3%B4ng_B%C3%AD
+http://dbpedia.org/resource/Untvad
+http://dbpedia.org/resource/Uni%C3%B3n_de_Tula
+http://dbpedia.org/resource/Udhana
+http://dbpedia.org/resource/Urban_water_management_in_Bogot%C3%A1,_Colombia
+http://dbpedia.org/resource/Uchqo%CA%BBrg%CA%BBon

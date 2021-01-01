@@ -100,6 +100,13 @@ public class FileFolderUtils {
         File[] files = dir.listFiles(fileFilter);
         return List.of(files);
     }
+    public static TreeSet<File> getFilesSet(String fileDir, String ntriple) {
+        File dir = new File(fileDir);
+        FileFilter fileFilter = new WildcardFileFilter("*" + ntriple);
+        File[] files = dir.listFiles(fileFilter);
+        return new TreeSet<File>(List.of(files));
+    }
+    
     
 
     public static List<File> getFiles(String fileDir, String category, String extension) {

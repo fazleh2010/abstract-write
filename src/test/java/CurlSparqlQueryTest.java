@@ -18,7 +18,7 @@ import org.junit.Test;
  */
 public class CurlSparqlQueryTest {
 
-    @Test
+    @Ignore
     public void propertyGeneration_WhenAbstract() throws Exception {
         String entityUrl = "http://dbpedia.org/resource/Allan_Dwan";
         String actual = "Allan Dwan (3 April 1885 – 28 December 1981) was a pioneering Canadian-born American motion picture director, producer and screenwriter.";
@@ -27,7 +27,7 @@ public class CurlSparqlQueryTest {
         assertEquals(sparql.getProperties().containsKey(DBO_ABSTRACT), Boolean.TRUE);
         assertEquals(sparql.getProperties().get("dbo:abstract").iterator().next(), actual);
     }
-     @Test
+     @Ignore
      public  void propertyGeneration_WhenNoAbstract() throws Exception {
         String entityUrl = "http://dbpedia.org/resource/A_Clockwork_Orange";
         SparqlQuery sparql = new SparqlQueryImpl(entityUrl);

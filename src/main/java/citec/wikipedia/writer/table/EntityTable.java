@@ -52,10 +52,11 @@ public class EntityTable {
             } else {
                 urlsWithNoAbstract.add(entityUrl);
             }
-            System.out.println("entity:" + entityUrl + " count" + index + " total:" + total); 
+            System.out.println(freqClass+" entity:" + entityUrl + " count:" + index + " total:" + total); 
+              index=index+1;
+
 
             if (limit != -1) {
-                index++;
                 if (index > limit) {
                     break;
                 }
