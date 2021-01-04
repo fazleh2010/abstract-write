@@ -60,8 +60,11 @@ public class FormatAndMatch {
         intersection.retainAll(sentenceTerms);
         return intersection;
     }
+    
+    
 
-    public static Pair<String, String> replacePronoun(String text, String SUBJECT, Set<String> pronouns) {
+
+    /*public static Pair<String, String> replacePronoun(String text, String SUBJECT, Set<String> pronouns) {
         String[] sentenceTokens = text.split("_");
         String str = "", pronounFound = null;
         Integer index = 0;
@@ -96,7 +99,7 @@ public class FormatAndMatch {
         }
         str = str + "\n";
         return new Pair<String, String>(pronounFound, str);
-    }
+    }*/
 
     public static String format(String sentence, Map<String, Pair<String, String>> annotatedNgram) {
         for (String id : annotatedNgram.keySet()) {
@@ -294,25 +297,7 @@ public class FormatAndMatch {
         
     }*/
      
-     public static void main(String[] args) {
-      String input = "<div>this is a <b>good</b> apple</div>";
-      System.out.println(input);
-      String s = replaceBetween(input, "<b>", "</b>", "big");
-      System.out.println(s);
-      s = replaceBetween(input, "<b>", "</b>", true, true, "big");
-      System.out.println(s);
-
-      String input2 = "there's more than one way to skin a cat";
-      System.out.println(input2);
-      String s2 = replaceBetween(input2, "more", "skin a", " to ");
-      System.out.println(s2);
-      s2 = replaceBetween(input2, "more", "skin a", true, true, "no");
-      System.out.println(s2);
-
-      System.out.println("-- without regex --");
-      replaceBetweenWithoutRegex(input2, "more", "skin a", true, true, "no");
-      System.out.println(s2);
-  }
+    
      
      public static String replaceBetween(String input,
                                       String start, String end,
@@ -354,5 +339,27 @@ public class FormatAndMatch {
       return str;
   }
 
+    private static String prepareSentence(String[] sentenceTokens, String SUBJECT) {
+        String str = "";
+        Integer index = 0;
+        for (String tokenStr : sentenceTokens) {
+            String line = null;
+            if (index == 0) {
+                tokenStr = SUBJECT;
+            }
+            index = index + 1;
+            if (index > sentenceTokens.length - 1) {
+                line = tokenStr;
+            } else {
+                line = tokenStr + "_";
+            }
+
+            str += line;
+        }
+        str = str + "\n";
+        return str;
+    }
+    
+     
 
 }

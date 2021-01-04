@@ -28,62 +28,7 @@ public class FileFolderUtils {
     private static String anchors = "src/main/resources/dbpedia/anchors/";
     private static String input = "input/";
     private static String achorFileTsv = "anchors_sorted_by_frequency.tsv";
-    //private static Set<String> alphabetSets = Stream.of("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z").collect(Collectors.toCollection(HashSet::new));
-
-    public static void main(String a[]) throws IOException {
-        String fileName = anchors + input + achorFileTsv;
-        //generate terms
-        //getAlphabetic(fileName, alphabetSets);
-
-        /* 
-         StringTokenizer st;
-        BufferedReader TSVFile = new BufferedReader(new FileReader(anchors + File.separator + achorFileTsv));
-        String dataRow = TSVFile.readLine(); // Read first line.
-         
-         
-         while (dataRow != null) {
-            st = new StringTokenizer(dataRow, "\t");
-            List<String> dataArray = new ArrayList<String>();
-            while (st.hasMoreElements()) {
-                dataArray.add(st.nextElement().toString());
-            }
-            for (String item : dataArray) {
-                System.out.print("item:"+item + "  ");
-            }
-            System.out.println(); // Print the data line.
-            dataRow = TSVFile.readLine(); // Read next line of data.
-        }
-        // Close the file once all data has been read.
-        TSVFile.close();
-
-        // End the printout with a blank line.
-        System.out.println();
-
-        /*FileFolderUtils mfe = new FileFolderUtils();
-        mfe.printFileList(anchors);*/
- /*String HTMLSTring = "<!DOCTYPE html>"
-                + "<html>"
-                + "<head>"
-                + "<title>JSoup Example</title>"
-                + "</head>"
-                + "<body>"
-                + "<table><tr><td>"
-                + "<h1>HelloWorld</h1></tr>"
-                + "</table>"
-                + "</body>"
-                + "</html>";*/
-    }
-
-    public static Map<String, TreeMap<String, List<String>>> getAlphabetInfo(String anchors, String fileExtension) throws IOException {
-        List<File> alphabetFiles = getFiles(anchors, fileExtension);
-        Map<String, TreeMap<String, List<String>>> alphabetInfo = new TreeMap<String, TreeMap<String, List<String>>>();
-        for (File file : alphabetFiles) {
-            TreeMap<String, List<String>> alphabet = fileToHash(anchors + file.getName());
-            String alphabetStr = file.getName().replaceAll(fileExtension, "");
-            alphabetInfo.put(alphabetStr, alphabet);
-        }
-        return alphabetInfo;
-    }
+    
 
     public static void createDirectory(String location) throws IOException {
         Path location_path = Paths.get(location);
@@ -100,6 +45,7 @@ public class FileFolderUtils {
         File[] files = dir.listFiles(fileFilter);
         return List.of(files);
     }
+
     public static TreeSet<File> getFilesSet(String fileDir, String ntriple) {
         File dir = new File(fileDir);
         FileFilter fileFilter = new WildcardFileFilter("*" + ntriple);
@@ -107,7 +53,11 @@ public class FileFolderUtils {
         return new TreeSet<File>(List.of(files));
     }
     
-    
+     public static String[] getFilesString(String fileDir, String ntriple) {
+         String[] files = new File(fileDir).list();
+        return files;
+    }
+
 
     public static List<File> getFiles(String fileDir, String category, String extension) {
         String[] files = new File(fileDir).list();
@@ -147,38 +97,6 @@ public class FileFolderUtils {
         return lists;
     }
 
-    public static TreeMap<String, List<String>> fileToHash(String fileName) throws FileNotFoundException, IOException {
-        TreeMap<String, List<String>> hash = new TreeMap<String, List<String>>();
-        BufferedReader reader;
-        String line = "";
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-            line = reader.readLine();
-            while (line != null) {
-                line = reader.readLine();
-                if (line != null) {
-                    if (line.contains("=")) {
-                        String[] info = line.split("=");
-                        String key = info[0];
-                        String value = info[1];
-                        key = FormatAndMatch.format(key);
-                        List<String> values = new ArrayList<String>();
-                        if (hash.containsKey(key)) {
-                            values = hash.get(key);
-                        }
-                        values.add(value);
-                        hash.put(key, values);
-                    }
-
-                }
-
-            }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return hash;
-    }
 
     public static List<String> getList(String fileName) throws FileNotFoundException, IOException {
         List<String> entities = new ArrayList<String>();
@@ -290,59 +208,7 @@ public class FileFolderUtils {
         }
     }
 
-    private static Map<String, TreeMap<String, String>> getAlphabetic(String fileName, Set<String> alphabetSets) {
-        Map<String, TreeMap<String, String>> alphabeticAnchors = new TreeMap<String, TreeMap<String, String>>();
-
-        BufferedReader reader;
-        String line = "";
-        String firstLetter = null;
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-            line = reader.readLine();
-            Integer index = 0;
-            while (line != null) {
-                line = reader.readLine();
-                if (line != null) {
-                    if (line.contains("\t")) {
-                        String[] info = line.split("\t");
-                        String anchor = info[1];
-                        anchor = anchor.replace("\"", "");
-
-                        String kb = info[0];
-                        Character ch = null;
-                        String str = null;
-                        String alphabetFileName = null;
-                        if (anchor.length() >= 1) {
-                            ch = anchor.charAt(0);
-                            str = String.valueOf(ch).toLowerCase().trim();
-
-                            /*if(!str.endsWith("a"))
-                                continue;
-                             */
-                            if (alphabetSets.contains(str)) {
-                                alphabetFileName = anchors + str + ".txt";
-                            } else {
-                                alphabetFileName = anchors + "other" + ".txt";
-                            }
-
-                            index = index + 1;
-                            System.out.println(index + "line= " + line);
-                            //anchor=anchor.toLowerCase().replaceAll(" ", "_").strip();
-                            //kb=kb.strip();
-                            anchor = anchor.stripLeading();
-                            line = anchor + " = " + kb;
-                            appendToFile(alphabetFileName, line);
-                        }
-                    }
-                }
-            }
-            System.out.println("total= " + index);
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return alphabeticAnchors;
-    }
+   
 
     public static void writeDictionaryToJsonFile(Map<String, Map<Integer, String>> units, String fileName) throws Exception {
         if (units.isEmpty()) {
@@ -386,16 +252,16 @@ public class FileFolderUtils {
         }
     }
 
-    public static void convertToJson(List<DBpediaEntity> dbpediaEntities, String filename)  {
+    public static void convertToJson(List<DBpediaEntity> dbpediaEntities, String filename) {
         if (dbpediaEntities.isEmpty()) {
-           System.out.println("the list is empty!!!");
-           return;
+            System.out.println("the list is empty!!!");
+            return;
         }
         ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
         try {
             mapper.writeValue(Paths.get(filename + ".json").toFile(), dbpediaEntities);
         } catch (IOException ex) {
-           System.out.println("can not convert DBpediaEntity to Json file!!!");
+            System.out.println("can not convert DBpediaEntity to Json file!!!");
         }
     }
 
@@ -403,5 +269,4 @@ public class FileFolderUtils {
         return dbo_Politician.split(":")[1];
     }
 
- 
 }

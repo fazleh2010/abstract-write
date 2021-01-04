@@ -3,7 +3,7 @@ sort -k1 -n class_frequencies.txt | tail -n 100
    4814 PowerStation
    4937 PoliticalParty
    5064 AcademicJournal
-   5102 Actor ---
+   5102 Actor ---done
    5326 Food
    5378 Disease
    5422 Reptile
