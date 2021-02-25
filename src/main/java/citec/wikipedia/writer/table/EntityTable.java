@@ -43,7 +43,6 @@ public class EntityTable {
         Integer index = 0, total = entities.size();
 
         for (String entityString : entities) {
-            entityString = "Donald_Trump";
             String entityUrl = DBpediaEntity.getEntityUrl(entityString);
 
             SparqlQuery curlSparqlQuery = new SparqlQueryImpl(entityUrl);

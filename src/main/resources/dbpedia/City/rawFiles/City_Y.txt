@@ -1,7 +1,0 @@
-http://dbpedia.org/resource/Yachimata,_Chiba
-http://dbpedia.org/resource/Yotsukaid%C5%8D
-http://dbpedia.org/resource/Yamuna_Nagar
-http://dbpedia.org/resource/Yahualica_de_Gonz%C3%A1lez_Gallo
-http://dbpedia.org/resource/Yurihonj%C5%8D,_Akita
-http://dbpedia.org/resource/Yerba_Buena,_Tucum%C3%A1n
-http://dbpedia.org/resource/Yol,_India

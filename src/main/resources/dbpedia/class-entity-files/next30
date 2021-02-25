@@ -1,0 +1,150 @@
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/RugbyPlayer>" | sed --expression 's/ <http:\/\/www.w3.*//' > RugbyPlayer.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/OfficeHolder>" | sed --expression 's/ <http:\/\/www.w3.*//' > OfficeHolder.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Bird>" | sed --expression 's/ <http:\/\/www.w3.*//' > Bird.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Airline>" | sed --expression 's/ <http:\/\/www.w3.*//' > Airline.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Work>" | sed --expression 's/ <http:\/\/www.w3.*//' > Work.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/WrittenWork>" | sed --expression 's/ <http:\/\/www.w3.*//' > WrittenWork.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/NaturalPlace>" | sed --expression 's/ <http:\/\/www.w3.*//' > NaturalPlace.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/ArchitecturalStructure>" | sed --expression 's/ <http:\/\/www.w3.*//' > ArchitecturalStructure.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Region>" | sed --expression 's/ <http:\/\/www.w3.*//' > Region.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/MusicAlbum>" | sed --expression 's/ <http:\/\/www.w3.*//' > MusicAlbum.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/EducationalInstitution>" | sed --expression 's/ <http:\/\/www.w3.*//' > WinterSportPlayer.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/WinterSportPlayer>" | sed --expression 's/ <http:\/\/www.w3.*//' > Band.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/AdministrativeRegion>" | sed --expression 's/ <http:\/\/www.w3.*//' > AdministrativeRegion.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/MeanOfTransportation>" | sed --expression 's/ <http:\/\/www.w3.*//' > MeanOfTransportation.txt
+
+
+
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Infrastructure>" | sed --expression 's/ <http:\/\/www.w3.*//' > Infrastructure.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/AutomobileEngine>" | sed --expression 's/ <http:\/\/www.w3.*//' > AutomobileEngine.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/School>" | sed --expression 's/ <http:\/\/www.w3.*//' > School.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Station>" | sed --expression 's/ <http:\/\/www.w3.*//' > Station.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Ship>" | sed --expression 's/ <http:\/\/www.w3.*//' > Ship.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/River>" | sed --expression 's/ <http:\/\/www.w3.*//' > River.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Sound>" | sed --expression 's/ <http:\/\/www.w3.*//' > Sound.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Scientist>" | sed --expression 's/ <http:\/\/www.w3.*//' > Scientist.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Road>" | sed --expression 's/ <http:\/\/www.w3.*//' > Road.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Fish>" | sed --expression 's/ <http:\/\/www.w3.*//' > Fish.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Place>" | sed --expression 's/ <http:\/\/www.w3.*//' > Place.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/VideoGame>" | sed --expression 's/ <http:\/\/www.w3.*//' > VideoGame.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/AdministrativeRegion>" | sed --expression 's/ <http:\/\/www.w3.*//' > AdministrativeRegion.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/SoccerManager>" | sed --expression 's/ <http:\/\/www.w3.*//' > SoccerManager.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Cricketer>" | sed --expression 's/ <http:\/\/www.w3.*//' > Cricketer.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/SportsTeamMember>" | sed --expression 's/ <http:\/\/www.w3.*//' > SportsTeamMember.txt
+
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/HistoricPlace>" | sed --expression 's/ <http:\/\/www.w3.*//' > HistoricPlace.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/IceHockeyPlayer>" | sed --expression 's/ <http:\/\/www.w3.*//' > IceHockeyPlayer.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/MilitaryUnit>" | sed --expression 's/ <http:\/\/www.w3.*//' > MilitaryUnit.txt
+
+
+
+
+SoccerPlayer
+Insect
+Village
+Agent
+Settlement
+CareerStation
+Film
+TimePeriod
+Plant
+MusicalArtist
+Town
+Building
+Band
+Artist
+Mollusca
+MilitaryPerson
+AutomobileEngine
+School
+Station
+Ship
+River
+Sound
+Scientist
+Road
+Fish
+Place
+VideoGame
+AdministrativeRegion
+AmericanFootballPlayer
+SoccerManager
+Cricketer
+SportsTeamMember
+Asteroid
+
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/SoccerClubSeason>" | sed --expression 's/ <http:\/\/www.w3.*//' > SoccerClubSeason.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/PowerStation>" | sed --expression 's/ <http:\/\/www.w3.*//' > PowerStation.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/AcademicJournal>" | sed --expression 's/ <http:\/\/www.w3.*//' > AcademicJournal.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Disease>" | sed --expression 's/ <http:\/\/www.w3.*//' > Disease.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Reptile>" | sed --expression 's/ <http:\/\/www.w3.*//' > Reptile.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/CareerStation>" | sed --expression 's/ <http:\/\/www.w3.*//' > CareerStation.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/ChristianBishop>" | sed --expression 's/ <http:\/\/www.w3.*//' > ChristianBishop.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/ProtectedArea>" | sed --expression 's/ <http:\/\/www.w3.*//' > ProtectedArea.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Drug>" | sed --expression 's/ <http:\/\/www.w3.*//' > Drug.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Song>" | sed --expression 's/ <http:\/\/www.w3.*//' > Song.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Animal>" | sed --expression 's/ <http:\/\/www.w3.*//' > Animal.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/AustralianRulesFootballPlayer>" | sed --expression 's/ <http:\/\/www.w3.*//' > AustralianRulesFootballPlayer.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/NCAATeamSeason>" | sed --expression 's/ <http:\/\/www.w3.*//' > NCAATeamSeason.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/FootballLeagueSeason>" | sed --expression 's/ <http:\/\/www.w3.*//' > FootballLeagueSeason.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/MilitaryPerson>" | sed --expression 's/ <http:\/\/www.w3.*//' > MilitaryPerson.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Cyclist>" | sed --expression 's/ <http:\/\/www.w3.*//' > Cyclist.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/NCAATeamSeason>" | sed --expression 's/ <http:\/\/www.w3.*//' > NCAATeamSeason.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/HistoricBuilding>" | sed --expression 's/ <http:\/\/www.w3.*//' > HistoricBuilding.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Sales>" | sed --expression 's/ <http:\/\/www.w3.*//' > Activity.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Activity>" | sed --expression 's/ <http:\/\/www.w3.*//' > River.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Planet>" | sed --expression 's/ <http:\/\/www.w3.*//' > Planet.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Event>" | sed --expression 's/ <http:\/\/www.w3.*//' > Event.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Automobile>" | sed --expression 's/ <http:\/\/www.w3.*//' > Automobile.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Engine>" | sed --expression 's/ <http:\/\/www.w3.*//' > Engine.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/PopulatedPlace>" | sed --expression 's/ <http:\/\/www.w3.*//' > PopulatedPlace.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Device>" | sed --expression 's/ <http:\/\/www.w3.*//' > Device.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Mammal>" | sed --expression 's/ <http:\/\/www.w3.*//' > Mammal.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/University>" | sed --expression 's/ <http:\/\/www.w3.*//' > University.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/RadioStation>" | sed --expression 's/ <http:\/\/www.w3.*//' > RadioStation.txt
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Royalty>" | sed --expression 's/ <http:\/\/www.w3.*//' > Royalty.txt
+
+
+sort -k1 -n class_frequencies.txt | tail -n 100
+   4808 SoccerClubSeason
+   4814 PowerStation
+   5064 AcademicJournal
+   5326 Food
+   5378 Disease
+   5422 Reptile
+   5485 ChristianBishop
+   5685 ProtectedArea
+   5755 Drug
+   6062 Song
+   6138 Animal
+   6534 AustralianRulesFootballPlayer
+   6564 CollegeCoach
+   6625 NCAATeamSeason
+   6950 FootballLeagueSeason
+   7020 Cyclist
+   7024 HistoricBuilding
+   7395 Sales
+   7425 Activity
+   7439 Planet
+   7585 Event
+   8302 Automobile
+   8391 Engine
+   8510 PopulatedPlace
+   8851 Device
+   9027 Mammal
+   9037 University  --want to do
+   9191 RadioStation
+   9246 Organisation ---want to do
+   9411 BasketballPlayer
+   9502 Royalty
+   9733 ChemicalCompound
+   9808 Fungus
+  10298 Location ----
+  10485 MilitaryConflict --want to do
+  11082 Airport ---want to do
+  11658 Lake
+  12258 Protein
+  12875 Bird

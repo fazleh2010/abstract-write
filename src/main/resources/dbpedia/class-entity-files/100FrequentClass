@@ -99,3 +99,36 @@ sort -k1 -n class_frequencies.txt | tail -n 100
  222416 Settlement
  710143 Person ----
  826399 CareerStation 
+
+
+
+SoccerPlayer
+Insect
+Village
+Agent
+Settlement
+CareerStation
+Film
+TimePeriod
+Plant
+MusicalArtist
+Town
+Building
+Band
+Artist
+Mollusca
+MilitaryPerson
+AutomobileEngine
+School
+Station
+Ship
+River
+Sound
+Scientist
+Road
+Fish
+Place
+VideoGame
+AdministrativeRegion
+AmericanFootballPlayer
+SoccerManager

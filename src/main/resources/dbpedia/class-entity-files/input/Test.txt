@@ -1,6 +1,0 @@
-<http://dbpedia.org/resource/Ben_Nevis>
-<http://dbpedia.org/resource/Corcovado>
-<http://dbpedia.org/resource/Kangchenjunga>
-<http://dbpedia.org/resource/Krakatoa>
-<http://dbpedia.org/resource/K2>
-<http://dbpedia.org/resource/Mount_Lykaion>

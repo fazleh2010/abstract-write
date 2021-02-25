@@ -42,6 +42,18 @@ cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/BaseballPlayer>" |
 cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Single>" | sed --expression 's/ <http:\/\/www.w3.*//' > Single.txt
 
 
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Lake>" | sed --expression 's/ <http:\/\/www.w3.*//' > Lake.txt
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Athlete>" | sed --expression 's/ <http:\/\/www.w3.*//' > Athlete.txt
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/State>" | sed --expression 's/ <http:\/\/www.w3.*//' > State.txt
+
+cat instance-types_en.nt | grep "<http://dbpedia.org/ontology/Stadium>" | sed --expression 's/ <http:\/\/www.w3.*//' > Stadium.txt
+
+
+
+
+
 
 MilitaryConflict
 
